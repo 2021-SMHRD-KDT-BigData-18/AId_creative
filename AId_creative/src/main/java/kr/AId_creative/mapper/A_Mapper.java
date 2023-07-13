@@ -11,6 +11,5 @@ public interface A_Mapper {
 	public void signup(User_Info user);
 	
 	
-	public int ss();
 
 }

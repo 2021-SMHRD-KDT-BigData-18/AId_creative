@@ -1,58 +1,53 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE HTML>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<div class="title">AId creative</div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AId creative</title>
+    <link rel="stylesheet" href="resources/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="./style/login.css">
+    <link rel="stylesheet" type="text/css" href="./style/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="./js/login.js" defer=""></script>
+
+    
+    <body>
+    <div class="title">AId creative</div>
 
 
 
-
-	<div class="login_wrapper">
-		<div class="logo">AId creative</div>
-		<form class="login_form">
-			<input id="LOGIN_ID" class="login_text" type="text" name="id"
-				placeholder=" ID "> <input id="LOGIN_PW" class="login_text"
-				type="password" name="pw" placeholder=" PW ">
-			<button id="LOGIN_BTN" class="login_btn" type="button" disabled>Sign
-				in</button>
-			<h3>------ 회원이 아니신가요? ------</h3>
-			<button id="btn-modal" class="join_btn">Sign up</button>
-		</form>
+    
+        <div class="login_wrapper">
+            <div class="logo"> AId creative </div>
+            <form class="login_form">
+                <input id="LOGIN_ID" class="login_text" type="text" name="id" placeholder=" ID ">
+                <input id="LOGIN_PW" class="login_text" type="password" name="pw" placeholder=" PW ">
+                <button id="LOGIN_BTN" class="login_btn" type="button" disabled>Sign in</button>
+                <h3>------ 회원이 아니신가요? ------</h3>
+                <button id="btn-modal" class="join_btn">Sign up</button>
+            </form>
 
 
-	</div>
+        </div>
+    
+        <div id="modal" class="modal-overlay">
+            <div class="close-area">X</div>
+            
+                <div class="logo"> AId creative </div>
 
-	<div id="modal" class="modal-overlay">
-		<div class="close-area">X</div>
-
-		<div class="logo">AId creative</div>
-
-		<form class="join_form">
-			<input id="ID" class="join_text" type="text"
-				placeholder=" ID를 입력하세요 "> &nbsp; &nbsp; &nbsp; &nbsp;
-			&nbsp; <input id="PW" class="join_text" type="text"
-				placeholder=" PW를 입력하세요 "> &nbsp; &nbsp; &nbsp; &nbsp; <input
-				id="PHONE" class="join_text" type="text" placeholder="핸드폰 번호를 입력하세요">
-			&nbsp; &nbsp; &nbsp; &nbsp; <input id="NICK" class="join_text"
-				type="text" placeholder=" 닉네임 입력하세요 ">
-			<button class="join_btn">Sign up</button>
-		</form>
-
-
-
-
-
-
-
-
-	</div>
-	</div>
+                <form class="join_form">
+                        <input id="ID" class="join_text" type="text" placeholder=" ID를 입력하세요 "> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input id="PW" class="join_text" type="text" placeholder=" PW를 입력하세요 "> &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input id="PHONE" class="join_text" type="text" placeholder="핸드폰 번호를 입력하세요"> &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input id="NICK" class="join_text" type="text" placeholder=" 닉네임 입력하세요 ">
+                        <button class="join_btn">Sign up</button>
+                </form>
 
 
 
@@ -60,11 +55,21 @@
 
 
 
+            
+        </div>
+    </div>
 
 
 
 
-	<script>
+
+
+
+
+
+
+
+    <script>
         const modal = document.getElementById("modal");
 
         const modalContent = document.getElementById("modalContent");
@@ -103,5 +108,7 @@
 
 
 
+
 </body>
+
 </html>
