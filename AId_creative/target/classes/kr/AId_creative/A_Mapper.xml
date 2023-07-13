@@ -17,6 +17,12 @@
 		(#{USER_ID},#{USER_PW},#{USER_NICK})
 	</insert>
 
+	<select id="ss" resultType="Integer">
+	select HI
+	from tests
+	</select>
+
+
 </mapper>
  
 
