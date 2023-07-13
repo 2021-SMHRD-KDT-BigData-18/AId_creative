@@ -39,12 +39,6 @@
 	</div>
 	<div>
 
-
-
-
-
-
-
 		<div class="container">
 			<h2>Our image sample</h2>
 			<section class="customer-logos slider">
@@ -105,8 +99,7 @@
 				} ]
 			});
 		});
+		
 	</script>
-
-
 
 </body>
