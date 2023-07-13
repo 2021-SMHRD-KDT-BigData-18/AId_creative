@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width">
 <title class="title">AId creative mainpage</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-
+<link rel="stylesheet" href="resources/css/NewFile.css" />
 <script src="script.js"></script>
 <script src="https://replit.com/public/js/replit-badge-v2.js"
 	theme="dark" position="bottom-right"></script>
@@ -40,7 +40,7 @@
 	<div>
 
 		<div class="container">
-			<h2>Our image sample</h2>
+			<h2>AId creative sample</h2>
 			<section class="customer-logos slider">
 				<div class="slide">
 					<img

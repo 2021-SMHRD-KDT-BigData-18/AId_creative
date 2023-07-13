@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import kr.AId_creative.entity.USER_INFO;
+import kr.AId_creative.entity.User_Info;
 import kr.AId_creative.mapper.A_Mapper;
 
 @Controller
@@ -30,8 +30,8 @@ public class A_Controller {
 
 	// 회원가입 페이지
 	@GetMapping("/signup")
-	public String showSignupForm(Model model) {
-		model.addAttribute("user", new USER_INFO());
+	public String signup(Model model) {
+		model.addAttribute("user", new User_Info());
 		return "signup";
 	}
 

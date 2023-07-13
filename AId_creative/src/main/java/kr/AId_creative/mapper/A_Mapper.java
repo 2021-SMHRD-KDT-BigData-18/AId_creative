@@ -2,12 +2,12 @@ package kr.AId_creative.mapper;
 
 import org.springframework.stereotype.Service;
 
-import kr.AId_creative.entity.USER_INFO;
+import kr.AId_creative.entity.User_Info;
 
 @Service // 필요한 의존성 주입
 public interface A_Mapper {
 
 	// 회원가입
-	public void registerUser(USER_INFO user);
+	public void registerUser(User_Info user);
 
 }

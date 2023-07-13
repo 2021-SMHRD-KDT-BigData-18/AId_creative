@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.AId_creative.mapper.A_Mapper">
+
+	<!-- 로그인 -->
+	<select id="login"
+		parameterType="kr.AId_creative.entity.User_Info"
+		resultType="kr.AId_creative.entity.User_Info">
+		select * from A_MEMBER where USER_ID=#{USER_ID} and
+		USER_PW=#{USER_PW}
+	</select>
+
+	<!-- 회원가입 -->
+	<insert id="signup"
+		parameterType="kr.AId_creative.entity.User_Info">
+		INSERT INTO A_MEMBER VALUES
+		(#{USER_ID},#{USER_PW},#{USER_NICK})
+	</insert>
+
+</mapper>
+ 
+
+
+ 
+ 
+
