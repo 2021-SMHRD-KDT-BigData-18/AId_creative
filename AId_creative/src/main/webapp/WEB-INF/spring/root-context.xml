@@ -20,7 +20,7 @@
 		 hikariConfig.setXXXX(password);
 	 -->
 	<bean class="com.zaxxer.hikari.HikariConfig" id="hikariConfig">
-		<property name="driverClassName" value="oracle.jdbc.driver"/>
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
 		<property name="username" value="king"/>
 		<property name="password" value="kong"/>
 		<!-- 데이터 소스 익스플로러에서 연결된 계정 우클릭. properties -> driver properties -> jdbcurl -->
