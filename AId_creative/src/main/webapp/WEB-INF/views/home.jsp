@@ -29,9 +29,10 @@
 <body>
 	<div class="title">AId creative</div>
 	<div class="main">
-
+		
 		<div class="tab">
 			<!-- <button class="btn-open-popup">Login</div> -->
+			<form action="login" method="POST">
 			<button class="btn-open-popup" onclick="location.href='Login.html'">Login
 				/ Join</button>
 			<!-- <button class="btn-open-popup">Join</button> -->

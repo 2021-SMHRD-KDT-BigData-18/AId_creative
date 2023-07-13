@@ -23,7 +23,7 @@ public class A_Controller {
 	}
 
 	// 로그인 페이지
-	@GetMapping("/login")
+	@PostMapping("/login")
 	public String login() {
 		return "login";
 	}
