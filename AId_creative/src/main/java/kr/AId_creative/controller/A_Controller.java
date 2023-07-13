@@ -16,23 +16,23 @@ public class A_Controller {
 	@Autowired
 	private A_Mapper mapper;
 
+	// 메인 페이지 ( 임시 )
+	@GetMapping("/")
+	public String main() {
+		return "home";
+	}
+
 	// 로그인 페이지
 	@GetMapping("/login")
 	public String login() {
 		return "login";
 	}
-	
-	// 메인 페이지
-	@GetMapping("/main")
-	public String main() {
-		return "main";
-	}
-	
+
 	// 회원가입 페이지
 	@GetMapping("/signup")
 	public String showSignupForm(Model model) {
 		model.addAttribute("user", new USER_INFO());
 		return "signup";
 	}
-	
+
 }
