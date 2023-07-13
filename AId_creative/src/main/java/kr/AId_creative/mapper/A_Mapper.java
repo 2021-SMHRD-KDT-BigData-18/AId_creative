@@ -8,6 +8,6 @@ import kr.AId_creative.entity.User_Info;
 public interface A_Mapper {
 
 	// 회원가입
-	public void registerUser(User_Info user);
+	public void signup(User_Info user);
 
 }
