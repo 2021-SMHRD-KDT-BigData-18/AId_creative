@@ -1,33 +1,41 @@
-//package kr.AId_creative.controller;
-//
-//import java.io.IOException;
-//
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.RequestParam;
-//import org.springframework.web.multipart.MultipartFile;
-//
-//@Controller
-//public class UploadController {
-//
-//	@PostMapping("/upload")
-//	public String uploadFile(@RequestParam("file")MultipartFile file) {
-//		if (!file.isEmpty()) {
-//			try {
-//				String fileName =file.getOriginalFilename();
-//				byte[] bytes=file.getBytes();
-//				
-//				//파일저장로직
-//				//파일 로컬디스크,db저장할때
-//				
-//				return "upload_success"	
-//						//업로드성공페이지로
-//			}catch (IOException e) {
-//				e.printStackTrace();
-//				//업로드 실패로직
-//			}
-//		}
-//		return "upload_failure" 
-//				//업로드실패페이지로
-//	}
-//}
+package kr.AId_creative.controller;
+
+import java.io.File;
+import java.io.FileOutputStream;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+@Controller
+public class UploadController {
+
+   private String uploadDir = "/path/to/upload/dir"; // 파일이 저장될 경로
+    @PostMapping("/upload")
+    public String handleFileUpload(@RequestParam("file") MultipartFile file) {
+        // 업로드된 파일 처리 로직 작성
+       
+        if (!file.isEmpty()) {
+            try {
+                // 파일 저장 로직 작성
+                // 예를 들어, 파일을 로컬 디스크에 저장하거나 DB에 저장할 수 있습니다.
+            
+//               File targetFile = new File(uploadDir + File.separator + "data.jpg");
+//                FileCopyUtils.copy(data.getBytes(), new FileOutputStream(targetFile));
+                
+            
+                
+                return "upload_success"; // 업로드 성공 페이지로 리다이렉트
+            } catch (Exception e) {
+                e.printStackTrace();
+                // 업로드 실패 처 리로직 작성
+            }
+        }
+
+        return "upload_failure"; // 업로드 실패 페이지로 리다이렉트
+    }
+
+    // ...
+}
