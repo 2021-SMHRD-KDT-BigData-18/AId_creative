@@ -27,6 +27,7 @@
 </head>
 
 <body>
+
 	<div class="title">AId creative</div>
 	<div class="main">
 		
@@ -40,8 +41,14 @@
 	</div>
 	<div>
 
+
+
+
+
+
+
 		<div class="container">
-			<h2>AId creative sample</h2>
+			<h2>Our image sample</h2>
 			<section class="customer-logos slider">
 				<div class="slide">
 					<img
@@ -78,29 +85,30 @@
 	</div>
 
 	<script>
-		$(document).ready(function() {
-			$('.customer-logos').slick({
-				slidesToShow : 6,
-				slidesToScroll : 1,
-				autoplay : true,
-				autoplaySpeed : 1500,
-				arrows : false,
-				dots : false,
-				pauseOnHover : false,
-				responsive : [ {
-					breakpoint : 768,
-					settings : {
-						slidesToShow : 4
-					}
-				}, {
-					breakpoint : 520,
-					settings : {
-						slidesToShow : 3
-					}
-				} ]
-			});
-		});
-		
-	</script>
+        $(document).ready(function () {
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });
+    </script>
+
+
 
 </body>
