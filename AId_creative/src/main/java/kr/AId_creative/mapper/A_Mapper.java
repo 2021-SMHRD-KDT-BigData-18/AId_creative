@@ -9,5 +9,8 @@ public interface A_Mapper {
 
 	// 회원가입
 	public void signup(User_Info user);
+	
+	
+	public int ss();
 
 }

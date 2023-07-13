@@ -19,6 +19,7 @@ public class A_Controller {
 	// 메인 페이지 ( 임시 )
 	@GetMapping("/")
 	public String main() {
+		System.out.println(mapper.ss());
 		return "home";
 	}
 
