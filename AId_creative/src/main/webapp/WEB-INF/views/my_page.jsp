@@ -13,17 +13,17 @@
 <body>
     <div class="header">
         <div class="headerTitle">
-            <h1>ë¡ê³ </h1>
-            <a href="">ë¡ê·¸ì¸/íìê°ì</a>
+            <h1>로고</h1>
+            <a href="">로그인/회원가입</a>
         </div>
         <div class="headerTab">
-            <a href="">íìµíê¸°</a>
-            <a href="">ë³ííê¸°</a>
-            <a href="">ë§ì´íì´ì§</a>
+            <a href="">학습하기</a>
+            <a href="">변환하기</a>
+            <a href="">마이페이지</a>
         </div>
     </div>
     <div class="pageSection">
-        <h3>ë§ì´ íì´ì§</h3>
+        <h3>마이 페이지</h3>
         <div class="mypage">
 
             <div class="listbox">
@@ -31,7 +31,7 @@
 
 
             </div>
-            <h3>ë³íë ì´ë¯¸ì§ë¤</h3>
+            <h3>변환된 이미지들</h3>
             <div class="cvtbox">
 
 
