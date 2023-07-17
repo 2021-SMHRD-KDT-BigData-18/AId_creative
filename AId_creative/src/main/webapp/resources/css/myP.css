@@ -1,0 +1,94 @@
+:root {
+    --bg-color:linear-gradient(81.02deg, #fa5560 -23.47%, #b14bf4 45.52%, #4d91ff 114.8%);
+  }
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0px;
+    margin-bottom: 10vh;
+}
+h3{
+    color: #8858ED;
+    margin: 0px;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    max-height: 12vh;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.452);
+}
+
+
+.headerTitle {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.headerTab {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.header>div>a {
+    color: white;
+    text-decoration-line: none;
+}
+
+.header>div {}
+
+.pageSection{
+    padding-top: 12vh;
+}
+
+.mypage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listbox{
+    width: 70%;
+    min-height: 40vh;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgb(102, 102, 102);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 50%; */
+    background-color: rgb(255, 255, 255);
+    /* min-height: 1vh; */
+    border-radius: 2rem;
+}
+
+.cvtbox{
+    width: 70%;
+    min-height: 40vh;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgb(102, 102, 102);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 50%; */
+    background-color: rgb(255, 255, 255);
+    /* min-height: 1vh; */
+    border-radius: 2rem;
+}

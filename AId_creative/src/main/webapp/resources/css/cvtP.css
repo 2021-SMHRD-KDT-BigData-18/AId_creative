@@ -1,0 +1,144 @@
+:root {
+    --bg-color: linear-gradient(81.02deg, #fa5560 -23.47%, #b14bf4 45.52%, #4d91ff 114.8%);
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+
+h3 {
+    color: #8858ED;
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.452);
+}
+
+.headerTitle {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.headerTab {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.header>div>a {
+    color: white;
+    text-decoration-line: none;
+}
+
+.header>div {}
+
+.modelNameSelect {
+    border-radius: 10px;
+    border: 2px solid #8858ED;
+    background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.modelNameSelect .label {
+    color: white;
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modelNameSelect .optionList {
+    width: 100%;
+    background: #8858ED;
+    color: #fff;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+}
+
+.modelNameSelect.active .optionList {
+    max-height: 500px;
+}
+
+.modelNameSelect .optionItem {
+    border-bottom: 1px dashed rgb(170, 72, 72);
+    padding: 5px 15px 5px;
+    transition: .1s;
+}
+
+.modelNameSelect .optionItem:hover {
+    background: rgb(175, 93, 93);
+}
+
+.modelNameSelect .optionItem:last-child {
+    border-bottom: 0 none;
+}
+
+
+
+
+.cvtpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.cvtform {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadbox {
+    margin-top: 30px;
+    min-width: 100%;
+    color: rgb(102, 102, 102);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    /* height: 50%; */
+    background-color: rgb(255, 255, 255);
+    /* min-height: 1vh; */
+    border-radius: 60px;
+    border-style: dashed;
+}
+
+#cvtSub {
+    margin: 30px;
+    min-width: 100%;
+    height: 10vh;
+    font-size: 2rem;
+    border-radius: 10vh;
+    background: var(--bg-color);
+    color: white;
+}
