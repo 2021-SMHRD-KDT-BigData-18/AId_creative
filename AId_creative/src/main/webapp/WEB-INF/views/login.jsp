@@ -27,10 +27,10 @@
     
         <div class="login_wrapper">
             <div class="logo"> AId creative </div>
-            <form class="login_form">
+            <form class="login_form" method="POST" action="login">
                 <input id="LOGIN_ID" class="login_text" type="text" name="id" placeholder=" ID ">
                 <input id="LOGIN_PW" class="login_text" type="password" name="pw" placeholder=" PW ">
-                <button id="LOGIN_BTN" class="login_btn" type="button" disabled>Sign in</button>
+                <button id="LOGIN_BTN" class="login_btn">Sign in</button>
                 <button id="btn-modal" class="join_btn" type="button">Sign up</button>
             </form>
 
