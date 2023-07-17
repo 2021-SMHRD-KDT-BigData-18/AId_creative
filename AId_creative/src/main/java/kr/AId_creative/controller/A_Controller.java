@@ -90,10 +90,6 @@ public class A_Controller {
 	}
 
 	
-	@GetMapping("/my")
-	public String my() {
-		return "my_page";
-	}
-	
+
 	
 }

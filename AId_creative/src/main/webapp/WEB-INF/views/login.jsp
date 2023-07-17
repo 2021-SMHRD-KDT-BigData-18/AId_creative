@@ -18,7 +18,11 @@
 
     
     <body>
-    <div class="title">AId creative</div>
+    <body>
+    <div class="logo1">AId creative</div>
+
+
+
     
         <div class="login_wrapper">
             <div class="logo"> AId creative </div>
@@ -26,9 +30,8 @@
                 <input id="LOGIN_ID" class="login_text" type="text" name="id" placeholder=" ID ">
                 <input id="LOGIN_PW" class="login_text" type="password" name="pw" placeholder=" PW ">
                 <button id="LOGIN_BTN" class="login_btn" type="button" disabled>Sign in</button>
-                <h3>------ 회원이 아니신가요? ------</h3>
+                <button id="btn-modal" class="join_btn" type="button">Sign up</button>
             </form>
-                <button id="btn-modal" class="join_btn">Sign up</button>
 
 
         </div>
@@ -38,15 +41,13 @@
             
                 <div class="logo"> AId creative </div>
 
-                 <form class="join_form" action="register" method="post">
+                   <form class="join_form" action="register" method="post">
                         <input name = "user_id" id="ID" class="join_text" type="text" placeholder=" ID를 입력하세요 "> 
                         <input name = "user_pw" id="PW" class="join_text" type="text" placeholder=" PW를 입력하세요 "> 
                         <input id="PHONE" class="join_text" type="text" placeholder="핸드폰 번호를 입력하세요"> 
                         <input name = "user_nick" id="NICK" class="join_text" type="text" placeholder=" 닉네임 입력하세요 ">
                         <button class="join_btn">Sign up</button>
                 </form>
-
-
 
 
 
@@ -73,6 +74,10 @@
 
         const modalContent = document.getElementById("modalContent");
 
+
+        
+
+        
         //모달창 버튼을 클릭하면 모달을 나타나게 한다.
         const btnModal = document.getElementById("btn-modal");
         btnModal.addEventListener("click", e => {
@@ -101,6 +106,7 @@
             }
         });
 
+        
 
 
     </script>

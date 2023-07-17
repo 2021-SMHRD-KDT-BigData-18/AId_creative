@@ -9,7 +9,9 @@
 <meta name="viewport" content="width=device-width">
 <title class="title">AId creative mainpage</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="resources/css/NewFile.css" />
+<link rel="stylesheet" href="resources/css/home.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
+
 <script src="script.js"></script>
 <script src="https://replit.com/public/js/replit-badge-v2.js"
 	theme="dark" position="bottom-right"></script>
@@ -27,67 +29,50 @@
 </head>
 
 <body>
+    <div class="logo1">AId creative</div>
+    <div class="main">
+       
+        <div class="tab">
 
-	<div class="title">AId creative</div>
-	<div class="main">
-		
-		<div class="tab">
-			<!-- <button class="btn-open-popup">Login</div> -->
-			<form action="login" method="POST">
-			<button class="btn-open-popup" onclick="location.href='Login.html'">Login
-				/ Join</button>
-			<!-- <button class="btn-open-popup">Join</button> -->
-		</div>
-	</div>
-	<div>
-
+        <form action="login" method="POST">
+            <!-- <button class="btn-open-popup">Login</div> -->
+            <button class="btn-open-popup" onclick="location.href='login.html'">Login / Join</button>
+           <!-- <button class="btn-open-popup">Join</button> -->
+        </div>
+    </div>
+    <div>
 
 
 
 
 
 
-		<div class="container">
-			<h2>Our image sample</h2>
-			<section class="customer-logos slider">
-				<div class="slide">
-					<img
-						src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg">
-				</div>
-				<div class="slide">
-					<img
-						src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg">
-				</div>
-				<div class="slide">
-					<img
-						src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg">
-				</div>
-				<div class="slide">
-					<img
-						src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg">
-				</div>
-				<div class="slide">
-					<img
-						src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg">
-				</div>
-				<div class="slide">
-					<img
-						src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg">
-				</div>
-				<div class="slide">
-					<img
-						src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg">
-				</div>
 
-			</section>
-		</div>
+        <div class="container">
+            <h2 style="font-family:Lobster">Our image sample</h2>
+            <section class="customer-logos slider">
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
 
-	</div>
+            </section>
+        </div>
 
-	<script>
+    </div>
+
+    <script>
         $(document).ready(function () {
             $('.customer-logos').slick({
-                slidesToShow: 6,
+                slidesToShow: 5,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 1500,
@@ -95,12 +80,12 @@
                 dots: false,
                 pauseOnHover: false,
                 responsive: [{
-                    breakpoint: 768,
+                    breakpoint: 800,
                     settings: {
                         slidesToShow: 4
                     }
                 }, {
-                    breakpoint: 520,
+                    breakpoint: 600,
                     settings: {
                         slidesToShow: 3
                     }
@@ -110,6 +95,6 @@
     </script>
 
 
-
+   
 </body>
 </html>
