@@ -4,22 +4,23 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+
+      <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AId creative</title>
-    <link rel="stylesheet" href="resources/css/login.css" />
-    <link rel="stylesheet" type="text/css" href="./style/login.css">
-    <link rel="stylesheet" type="text/css" href="./style/common.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <script src="./js/login.js" defer=""></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/login.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
 
+    <script src="./js/login.js" defer=""></script>
+  </head>
     
     <body>
-    <body>
-    <div class="logo1">AId creative</div>
+ <div class="logo1">AId creative</div>
 
 
 
@@ -41,11 +42,10 @@
             
                 <div class="logo"> AId creative </div>
 
-                   <form class="join_form" action="register" method="post">
-                        <input name = "user_id" id="ID" class="join_text" type="text" placeholder=" ID를 입력하세요 "> 
-                        <input name = "user_pw" id="PW" class="join_text" type="text" placeholder=" PW를 입력하세요 "> 
-                        <input id="PHONE" class="join_text" type="text" placeholder="핸드폰 번호를 입력하세요"> 
-                        <input name = "user_nick" id="NICK" class="join_text" type="text" placeholder=" 닉네임 입력하세요 ">
+                <form class="join_form">
+                        <input id="ID" class="join_text" type="text" placeholder=" ID를 입력하세요 "> 
+                        <input id="PW" class="join_text" type="text" placeholder=" PW를 입력하세요 ">
+                        <input id="NICK" class="join_text" type="text" placeholder=" 닉네임 입력하세요 ">
                         <button class="join_btn">Sign up</button>
                 </form>
 
@@ -110,6 +110,7 @@
 
 
     </script>
+
 
 
 
