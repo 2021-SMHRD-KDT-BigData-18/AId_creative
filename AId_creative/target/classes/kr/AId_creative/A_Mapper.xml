@@ -4,19 +4,26 @@
 
 	<!-- 로그인 -->
 	<select id="login"
-		parameterType="kr.AId_creative.entity.User_Info"
-		resultType="kr.AId_creative.entity.User_Info">
-		select * from A_MEMBER where USER_ID=#{USER_ID} and
-		USER_PW=#{USER_PW}
+		parameterType="kr.AId_creative.entity.T_User"
+		resultType="kr.AId_creative.entity.T_User">
+		SELECT * FROM T_USER WHERE USER_ID=#{user_id} AND
+		USER_PW=#{user_pw}
 	</select>
 
 	<!-- 회원가입 -->
-	<insert id="signup"
-		parameterType="kr.AId_creative.entity.User_Info">
-		INSERT INTO A_MEMBER VALUES
-		(#{USER_ID},#{USER_PW},#{USER_NICK})
+	<insert id="register"
+		parameterType="kr.AId_creative.entity.T_User">
+		INSERT INTO T_USER VALUES
+		(#{user_id},#{user_pw},#{user_nick})
 	</insert>
-
+	
+	<!-- ID 중복확인 -->
+	<select id="checkuser" parameterType="kr.AId_creative.entity.T_User"
+		resultType="kr.AId_creative.entity.T_User">
+		SELECT USER_PW,USER_NICK FROM T_USER
+		WHERE USER_ID=#{user_id}
+	</select>
+	
 
 
 </mapper>
