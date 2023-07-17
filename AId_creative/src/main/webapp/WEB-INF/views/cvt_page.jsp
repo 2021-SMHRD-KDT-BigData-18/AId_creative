@@ -14,7 +14,7 @@
     <div class="header">
         <div class="headerTitle">
             <h1>로고</h1>
-            <a href="">로그인/회원가입</a>
+            <a href="/login">로그인/회원가입</a>
         </div>
         <div class="headerTab">
             <a href="">학습하기</a>

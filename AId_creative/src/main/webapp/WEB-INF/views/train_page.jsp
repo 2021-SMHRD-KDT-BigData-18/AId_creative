@@ -13,27 +13,27 @@
 <body>
     <div class="header">
         <div class="headerTitle">
-            <h1>ë¡ê³ </h1>
-            <a href="">ë¡ê·¸ì¸/íìê°ì</a>
+            <h1>로고</h1>
+            <a href="/login">로그인/회원가입</a>
         </div>
         <div class="headerTab">
-            <a href="">íìµíê¸°</a>
-            <a href="">ë³ííê¸°</a>
-            <a href="">ë§ì´íì´ì§</a>
+            <a href="">학습하기</a>
+            <a href="">변환하기</a>
+            <a href="">마이페이지</a>
         </div>
     </div>
     <div class="pageSection">
-        <h3>íìµ íì´ì§</h3>
+        <h3>학습 페이지</h3>
         <div class="uploadpage">
             <form class="uploadform">
-                <input id="modelNameInput" type="text" placeholder="ëª¨ë¸ì ì´ë¦ì ì í´ì£¼ì¸ì">
+                <input id="modelNameInput" type="text" placeholder="모델의 이름을 정해주세요">
                 <div class="uploadbox">
-                    <p>ìë§ ìì¶íì¼ë¡ ì¬ë ¤ì¼ë ê±¸ì?</p>
+                    <p>아마 압축파일로 올려야될걸요?</p>
                     <button>
-                        ì´ë¯¸ì§ì ìë¡ë
+                        이미지셋 업로드
                     </button>
                 </div>
-                <input id="imageSetSub" type="submit" value="íìµìì!">
+                <input id="imageSetSub" type="submit" value="학습시작!">
             </form>
         </div>
     </div>
