@@ -35,4 +35,11 @@ public class A_Controller {
 		return "signup";
 	}
 
+	
+	@GetMapping("/my")
+	public String my() {
+		return "my_page";
+	}
+	
+	
 }
