@@ -7,19 +7,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="trainP.css">
+    <link rel="stylesheet" href="resources/css/trainP.css">
 </head>
 
 <body>
     <div class="header">
         <div class="headerTitle">
             <h1>로고</h1>
-            <a href="/login">로그인/회원가입</a>
+            <a href="">로그인/회원가입</a>
         </div>
         <div class="headerTab">
-            <a href="">학습하기</a>
-            <a href="">변환하기</a>
-            <a href="">마이페이지</a>
+            <a href="" class="selectedTab">학습하기</a>
+            <a href="" class="unSelectedTab">변환하기</a>
+            <a href="" class="unSelectedTab">마이페이지</a>
         </div>
     </div>
     <div class="pageSection">
