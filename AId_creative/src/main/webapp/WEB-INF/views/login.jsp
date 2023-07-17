@@ -19,9 +19,6 @@
     
     <body>
     <div class="title">AId creative</div>
-
-
-
     
         <div class="login_wrapper">
             <div class="logo"> AId creative </div>
