@@ -89,4 +89,11 @@ public class A_Controller {
 		return "redirect:/login";
 	}
 
+	
+	@GetMapping("/my")
+	public String my() {
+		return "my_page";
+	}
+	
+	
 }

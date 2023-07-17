@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cvtP.css">
+    <link rel="stylesheet" href="resources/css/cvtP.css">
 </head>
 
 <body>
@@ -17,11 +17,12 @@
             <a href="/login">로그인/회원가입</a>
         </div>
         <div class="headerTab">
-            <a href="">학습하기</a>
-            <a href="">변환하기</a>
-            <a href="">마이페이지</a>
+            <a href="train">학습하기</a>
+            <a href="cvt">변환하기</a>
+            <a href="my">마이페이지</a>
         </div>
     </div>
+    <div class="pageSection">
     <h3>변환 페이지</h3>
     <div class="cvtpage">
         <form class="cvtform">
@@ -46,6 +47,7 @@
             </div>
             <input id="cvtSub" type="submit" value="변환시작!">
         </form>
+    </div>
     </div>
 
     <script>
