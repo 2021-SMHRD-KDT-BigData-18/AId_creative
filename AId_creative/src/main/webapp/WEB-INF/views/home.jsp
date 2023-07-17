@@ -34,7 +34,7 @@
        
         <div class="tab">
 
-        <form action="login" method="POST">
+        <form action="goLogin" method="POST">
             <!-- <button class="btn-open-popup">Login</div> -->
             <button class="btn-open-popup" onclick="location.href='login.html'">Login / Join</button>
            <!-- <button class="btn-open-popup">Join</button> -->

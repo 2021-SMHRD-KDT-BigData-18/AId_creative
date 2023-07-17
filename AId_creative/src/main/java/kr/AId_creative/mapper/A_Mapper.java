@@ -21,7 +21,7 @@ public interface A_Mapper {
 	// 회원가입
 	public void register(T_User user);
 
-	
+	public T_User login(T_User user);
 	
 	
 
