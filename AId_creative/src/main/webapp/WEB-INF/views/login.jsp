@@ -38,13 +38,15 @@
             
                 <div class="logo"> AId creative </div>
 
-                <form class="join_form">
-                        <input id="ID" class="join_text" type="text" placeholder=" ID를 입력하세요 "> 
-                        <input id="PW" class="join_text" type="text" placeholder=" PW를 입력하세요 "> 
+                 <form class="join_form" action="register" method="post">
+                        <input name = "user_id" id="ID" class="join_text" type="text" placeholder=" ID를 입력하세요 "> 
+                        <input name = "user_pw" id="PW" class="join_text" type="text" placeholder=" PW를 입력하세요 "> 
                         <input id="PHONE" class="join_text" type="text" placeholder="핸드폰 번호를 입력하세요"> 
-                        <input id="NICK" class="join_text" type="text" placeholder=" 닉네임 입력하세요 ">
+                        <input name = "user_nick" id="NICK" class="join_text" type="text" placeholder=" 닉네임 입력하세요 ">
                         <button class="join_btn">Sign up</button>
                 </form>
+
+
 
 
 

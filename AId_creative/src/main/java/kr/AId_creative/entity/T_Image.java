@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Img_Info {
+public class T_Image {
 
 	// 이미지 번호
 	private int img_code;

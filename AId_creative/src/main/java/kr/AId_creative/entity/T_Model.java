@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Model_Info {
+public class T_Model {
 
 	// 모델 번호
 	private int model_code;
