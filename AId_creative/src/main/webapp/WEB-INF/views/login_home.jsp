@@ -1,54 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 <html>
+
 <head>
-<title>Home</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title class="title">AId creative mainpage</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="resources/css/home.css" />
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title class="title">AId creative mainpage</title>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/home.css" />
 
-<script src="script.js"></script>
-<script src="https://replit.com/public/js/replit-badge-v2.js"
-	theme="dark" position="bottom-right"></script>
-<script src="./js/login.js" defer=""></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
 
-<script src="https://code.jquery.com/jquery-2.2.0.min.js"
-	type="text/javascript"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-	rel="stylesheet">
-</head>
+    <script src="script.js"></script>
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+    <script src="./js/login.js" defer=""></script>
 
-<body>
- 
-    <div class="logo1">AId creative</div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    
+    <body>
+  <div class="logo1">AId creative</div>
     <div class="main">
-       
-        <div class="tab">
 
-        <form action="goLogin" method="POST">
-            <!-- <button class="btn-open-popup">Login</div> -->
-            <button class="btn-open-popup" onclick="location.href='login.html'">Login / Join</button>
-           <!-- <button class="btn-open-popup">Join</button> -->
+        <div class="tab">
+             <form action="goLogin_Home" method="post"> 
+            	<a href="http://localhost:8085/creative/login_home"></a>
+                <a href="">학습하기</a>
+                <a href="">변환하기</a>
+                <a href="">마이페이지</a>
+            
+
+                <!-- <button class="btn-open-popup">Login</div> -->
+                    <button class="btn-open-popup" onclick="location.href='main.html'">Logout</button>
+                    <!-- <button class="btn-open-popup">Join</button> --> 
+            </from>
         </div>
     </div>
-    	</form>
+
+        
+       
+    </div>
+
+
+
+
+
     <div>
-	</form>
-
-
-
-
-
 
         <div class="container">
             <h2 style="font-family:Lobster">Our image sample</h2>
@@ -97,6 +100,5 @@
     </script>
 
 
-   
+
 </body>
-</html>
