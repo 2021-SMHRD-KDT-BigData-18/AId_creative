@@ -11,34 +11,40 @@
 </head>
 
 <body>
-    <div class="header">
+   <div class="header">
         <div class="headerTitle">
-            <h1>로고</h1>
-            <a href="/login">로그인/회원가입</a>
+            <h1>AId creative</h1>
+            <button  class="button button--quidel button--inverted" onclick="location.href=/login/">로그인</button>
+            <!-- <a class="a1" href="/login" >로그인</a> -->
         </div>
         <div class="headerTab">
-            <a href="train">학습하기</a>
-            <a href="cvt">변환하기</a>
-            <a href="my">마이페이지</a>
+            <button class="button button--quidel button--inverted" onclick="location.href=/train/">학습</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/cvt/">변환</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/my/">마이페이지</button>
+
+            <!-- <a class="a2" href="train">학습</a>
+            <a class="a2" href="cvt">변환하기</a>
+            <a class="a2" href="my">마이페이지</a> -->
         </div>
     </div>
     <div class="pageSection">
-        <h3>마이 페이지</h3>
-        <div class="mypage">
+    
+    <div class="cvtpage">
+        <form class="cvtform">
+            <!-- <select name="modelName" id="modelNameSelect">
+            </select> -->
 
-            <div class="listbox">
-
-
-
+            <div class="originbox">  
+                    
             </div>
-            <h3>변환된 이미지들</h3>
-            <div class="cvtbox">
-
-
-
-            </div>
+            <div class="changebox">  
+                
         </div>
-
+            <div class="trainstat">
+                <button class="button button--quidel button--inverted" type="submit"   >Save</button>
+            </div>  
+        </form>
+    </div>
     </div>
 </body>
 

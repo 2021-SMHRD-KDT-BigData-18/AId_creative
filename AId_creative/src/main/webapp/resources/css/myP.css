@@ -1,28 +1,20 @@
-:root {
-    --bg-color:linear-gradient(81.02deg, #fa5560 -23.47%, #b14bf4 45.52%, #4d91ff 114.8%);
-  }
-
 body {
-    background-color: black;
+    background-color: white;
     color: white;
     margin: 0px;
-    margin-bottom: 10vh;
 }
-h3{
-    color: #8858ED;
+
+h3 {
+    color: #000000;
     margin: 0px;
 }
 
 .header {
-    position: fixed;
     display: flex;
-    min-height: 15vh;
-    width: 100%;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(128, 128, 128, 0.452);
+    background-color: rgba(255, 255, 255, 0.452);
 }
-
 
 .headerTitle {
     width: 100%;
@@ -30,65 +22,213 @@ h3{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    
+   
 }
 
 .headerTab {
     width: 100%;
+    height: 40px;
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px thin;
 }
 
-
-
-.header>div>a {
-    color: white;
+.header>div>h1 {
+    color: rgb(0, 0, 0);
     text-decoration-line: none;
+    font-family: Lobster;
+    /* position: -webkit-sticky;
+    text-align: center; */
+    position: relative;
+     top: 50%; 
+     left: 50%; 
+     transform: translate(-50%, -50%); 
+    
 }
+
+.header>div>a1 {
+    color: rgb(0, 0, 0);
+    text-decoration-line: none;
+    
+} 
+
+.button {
+ 
+ border: #000000;
+
+} 
+
+.button:hover{
+    border-width : 1px thin;
+    border-style: solid;
+} 
+
+
+
+
+
+.a2{
+    font-size: 15px;
+}
+
 
 .header>div {}
 
-.pageSection{
-    padding-top: 15vh;
+
+
+input[type=text]{
+    display: flex;
+    -webkit-justify-content: center;
+	width:100%;
+	border:1px solid #000000;
+	border-radius:4px;
+	margin: 60px 0;
+	outline: none;
+	padding:8px;
+	box-sizing: border-box;
+	transition:.3s;
+
 }
 
-.mypage{
+
+.modelNameInput{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
+    
+}
+
+
+
+input[type=text]:focus{
+	border-color:rgb(236, 236, 236);
+	box-shadow:0 0 8px 0 dodgetBlue;
+}
+
+
+.cvtpage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.listbox{
-    width: 70%;
-    min-height: 40vh;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: rgb(102, 102, 102);
+
+
+.cvtform {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.originbox {
+    margin-top: 60px;
+    min-width: 150%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
     /* height: 50%; */
     background-color: rgb(255, 255, 255);
     /* min-height: 1vh; */
-    border-radius: 2rem;
+    /* border-radius: 60px; */
+    border-style: solid;
+    border-width: 1px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  /* display: flex; */
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+
+
 }
 
-.cvtbox{
-    width: 70%;
-    min-height: 40vh;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: rgb(102, 102, 102);
+.changebox {
+    margin-top: 60px;
+    min-width: 150%;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 30vh;
     /* height: 50%; */
     background-color: rgb(255, 255, 255);
     /* min-height: 1vh; */
-    border-radius: 2rem;
+    /* border-radius: 60px; */
+    border-style: solid;
+    border-width: 1px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  /* display: flex; */
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+
+
 }
+
+
+.button {
+  float: left;
+  min-width: 100px;
+  max-width: 150px;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em 0.3em;
+  border: none;
+  background: none;
+  color: #000000;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  /* border: #000000; */
+    border-radius: 8%;
+    text-align: center;
+} 
+
+/* .button:hover{
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px thin;
+} */
+
+.selectedTab{
+    border-bottom: solid 2px #fff;
+}
+
+.unSelectedTab:after {/*after 가상요소*/
+    display:block;/*a요소를 블록 요소라고 선언*/
+   /* width:70px;카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+ /*혹시 동일하지 않길 바란다면 width 삭제*/
+    content: '';
+    border-bottom: solid 2px #fff;
+    transform: scaleX(0);/*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+    transition: transform 250ms ease-in-out; /*변형 방식*/
+ }
+ .unSelectedTab:hover:after {
+    transform: scaleX(1);/*a 속성에 hover시 기존 크기로*/
+ }
+ .button1 {
+    margin : 10%;
+ }
+ button:hover {
+    cursor: pointer;
+ }
+
+

@@ -11,32 +11,47 @@
 </head>
 
 <body>
-    <div class="header">
+   <div class="header">
         <div class="headerTitle">
-            <h1>로고</h1>
-            <a href="">로그인/회원가입</a>
+            <h1>AId creative</h1>
+            <button  class="button button--quidel button--inverted" onclick="location.href=/login/">로그인</button>
+            <!-- <a class="a1" href="/login" >로그인</a> -->
         </div>
         <div class="headerTab">
-            <a href="" class="selectedTab">학습하기</a>
-            <a href="" class="unSelectedTab">변환하기</a>
-            <a href="" class="unSelectedTab">마이페이지</a>
+            <button class="button button--quidel button--inverted" onclick="location.href=/train/">학습</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/cvt/">변환</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/my/">마이페이지</button>
+
+            <!-- <a class="a2" href="train">학습</a>
+            <a class="a2" href="cvt">변환하기</a>
+            <a class="a2" href="my">마이페이지</a> -->
         </div>
     </div>
     <div class="pageSection">
-        <h3>학습 페이지</h3>
-        <div class="uploadpage">
-            <form class="uploadform" action="http://125.136.66.101:5500/train_page" enctype="multipart/form-data">
-                <input id="modelNameInput" type="text" placeholder="모델의 이름을 정해주세요">
-                <div class="uploadbox">
-                    <p>아마 압축파일로 올려야될걸요?</p>
-                    <button>
-                        이미지셋 업로드
-                    </button>
-                </div>
-                <input id="imageSetSub" type="submit" value="학습시작!">
-            </form>
-        </div>
+    
+    <div class="cvtpage">
+        <form class="cvtform">
+            <!-- <select name="modelName" id="modelNameSelect">
+            </select> -->
+
+        
+
+            <div class="modelNameInput" vertacal-align:middle>
+                <input type="text" placeholder="그림체 이름을 정해주세요">
+            </div>
+            <div class="uploadbox">
+                
+                    <button class="button button--quidel button--inverted">Img Upload</button>
+                  
+                </button>
+            </div>
+            <div class="trainstat">
+                <button class="button button--quidel button--inverted" type="submit"   >Start Train</button>
+            </div>  
+        </form>
     </div>
+    </div>
+
 </body>
 
 </html>
