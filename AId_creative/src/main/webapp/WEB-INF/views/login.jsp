@@ -20,7 +20,7 @@
   </head>
     
     <body>
- <div class="logo1">AId creative</div>
+ <div class="logo1"  onclick="location.href='http://localhost:8087/creative/.html'">AId creative</div>
 
 
 
