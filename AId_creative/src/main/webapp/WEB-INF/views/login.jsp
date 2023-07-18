@@ -20,43 +20,35 @@
   </head>
     
     <body>
- <div class="logo1">AId creative</div>
-
-
-
-    
-        <div class="login_wrapper">
-            <div class="logo"> AId creative </div>
-            <form class="login_form" method="POST" action="login">
-                <input id="LOGIN_ID" class="login_text" type="text" name="user_id" placeholder=" ID ">
-                <input id="LOGIN_PW" class="login_text" type="password" name="user_pw" placeholder=" PW ">
-                <button id="LOGIN_BTN" class="login_btn">Sign in</button>
-                <button id="btn-modal" class="join_btn" type="button">Sign up</button>
-            </form>
-
-
-        </div>
-    
-        <div id="modal" class="modal-overlay">
-            <div class="close-area">X</div>
-            
-                <div class="logo"> AId creative </div>
-
-                <form class="join_form" action="register" method="POST">
-                        <input id="ID" class="join_text" type="text" name="user_id" placeholder=" ID를 입력하세요 "> 
-                        <input id="PW" class="join_text" type="text" name="user_pw" placeholder=" PW를 입력하세요 ">
-                        <input id="NICK" class="join_text" type="text" name="user_nick" placeholder=" 닉네임 입력하세요 ">
-                        <button class="join_btn">Sign up</button>
-                </form>
+   <div class="logo1" onclick="location.href='http://localhost:8087/creative/.html'">AId creative</div>
 
 
 
 
+    <div class="login_wrapper">
+        <div class="logo"> AId creative </div>
+        <form class="login_form" method="POST" action="login">
+            <input id="LOGIN_ID" class="login_text" type="text" name="id" placeholder=" ID ">
+            <input id="LOGIN_PW" class="login_text" type="password" name="pw" placeholder=" PW ">
+            <button id="LOGIN_BTN" class="login_btn" type="button" disabled>Sign in</button>
+            <button id="btn-modal" class="btn_join" type="button">Sign up</button>
+        </form>
 
 
+    </div>
 
-            
-        </div>
+    <div id="modal" class="modal-overlay">
+        <div class="close-area">X</div>
+
+        <div class="logo"> AId creative </div>
+
+        <form class="join_form" action="register" method="POST">
+            <input id="inputID" class="join_text" type="text" name="user_id" placeholder=" ID를 입력하세요 ">
+            <input id="inputPW" class="join_text" type="text" name="user_pw" placeholder=" PW를 입력하세요 ">
+            <input id="inputNICK" class="join_text" type="text" name="user_nick" placeholder=" 닉네임 입력하세요 ">
+            <button id="btn-modal" class="btn_join" type="submit">Sign up</button>
+        </form>
+    </div>
     </div>
 
 
@@ -75,14 +67,14 @@
         const modalContent = document.getElementById("modalContent");
 
 
-        
 
-        
+
+
         //모달창 버튼을 클릭하면 모달을 나타나게 한다.
         const btnModal = document.getElementById("btn-modal");
         btnModal.addEventListener("click", e => {
             modal.style.display = "flex";
-           
+
         });
 
         //모달창의 x를 누르면 모달창이 사라진다.
@@ -106,10 +98,11 @@
             }
         });
 
-        
+
 
 
     </script>
+
 
 
 

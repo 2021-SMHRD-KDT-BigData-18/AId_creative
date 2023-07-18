@@ -40,8 +40,7 @@
            <!-- <button class="btn-open-popup">Join</button> -->
         </div>
     </div>
-    <div>
-
+    	</form>
 
 
 
