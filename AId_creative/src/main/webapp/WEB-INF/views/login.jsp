@@ -22,8 +22,6 @@
     <body>
  <div class="logo1"  onclick="location.href='http://localhost:8087/creative/.html'">AId creative</div>
 
-
-
     
         <div class="login_wrapper">
             <div class="logo"> AId creative </div>
