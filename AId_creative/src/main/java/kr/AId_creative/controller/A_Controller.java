@@ -23,9 +23,9 @@ public class A_Controller {
 	@Autowired
 	private A_Mapper mapper;
 
-	// 메인 페이지
-	@GetMapping("/")
-	public String main() {
+	// 홈 이동페이지
+	@RequestMapping("/goHome")
+	public String goHome() {
 		return "home";
 	}
 
@@ -33,6 +33,18 @@ public class A_Controller {
 	@RequestMapping("/goLogin")
 	public String goLogin() {
 		return "login";
+	}
+
+	// 학습 이동페이지
+	@RequestMapping("/goTrain")
+	public String goTrain() {
+		return "train_page";
+	}
+
+	// 메인
+	@GetMapping("/")
+	public String main() {
+		return "home";
 	}
 
 	// 로그인
@@ -55,17 +67,29 @@ public class A_Controller {
 		}
 	}
 
-	// 로그아웃 페이지
-	@PostMapping("/logout")
-	public String logout() {
-		return "login";
+	// 회원가입
+	@PostMapping("/register")
+	public String register(HttpServletRequest req, Model model) {
+		String id = req.getParameter("user_id");
+		String pw = req.getParameter("user_pw");
+		String nick = req.getParameter("user_nick");
+
+		T_User user = new T_User(id, pw, nick);
+
+		System.out.println(user.getUser_id());
+		System.out.println(user.getUser_pw());
+		System.out.println(user.getUser_nick());
+
+		// ArrayList<A_Mapper> member = mapper.list();
+		// model.addAttribute("loginid", member);
+		mapper.register(user);
+		return "redirect:/goHome";
 	}
 
-//	// 회원가입 페이지
-//	@GetMapping("/signup")
-//	public String signup(Model model) {
-//		model.addAttribute("user", new T_User());
-//		return "signup";
+//	// 로그아웃 페이지
+//	@PostMapping("/logout")
+//	public String logout() {
+//		return "login";
 //	}
 
 	// 중복
@@ -89,24 +113,5 @@ public class A_Controller {
 ////			
 ////			return "loginok";
 //	}
-
-	// 회원가입
-	@PostMapping("/register")
-	public String register(HttpServletRequest req, Model model) {
-		String id = req.getParameter("user_id");
-		String pw = req.getParameter("user_pw");
-		String nick = req.getParameter("user_nick");
-
-		T_User user = new T_User(id, pw, nick);
-
-		System.out.println(user.getUser_id());
-		System.out.println(user.getUser_pw());
-		System.out.println(user.getUser_nick());
-
-		// ArrayList<A_Mapper> member = mapper.list();
-		// model.addAttribute("loginid", member);
-		mapper.register(user);
-		return "redirect:/goLogin";
-	}
 
 }
