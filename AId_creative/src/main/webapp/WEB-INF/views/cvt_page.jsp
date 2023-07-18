@@ -11,26 +11,33 @@
 </head>
 
 <body>
-    <div class="header">
+   <div class="header">
         <div class="headerTitle">
-            <h1>로고</h1>
-            <a href="/login">로그인/회원가입</a>
+            <h1>AId creative</h1>
+            <button  class="button button--quidel button--inverted" onclick="location.href=/login/">로그인</button>
+            <!-- <a class="a1" href="/login" >로그인</a> -->
         </div>
         <div class="headerTab">
-            <a href="train">학습하기</a>
-            <a href="cvt">변환하기</a>
-            <a href="my">마이페이지</a>
+            <button class="button button--quidel button--inverted" onclick="location.href=/train/">학습</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/cvt/">변환</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/my/">마이페이지</button>
+
+            <!-- <a class="a2" href="train">학습</a>
+            <a class="a2" href="cvt">변환하기</a>
+            <a class="a2" href="my">마이페이지</a> -->
         </div>
     </div>
     <div class="pageSection">
-    <h3>변환 페이지</h3>
+    
     <div class="cvtpage">
         <form class="cvtform">
             <!-- <select name="modelName" id="modelNameSelect">
             </select> -->
 
             <div class="modelNameSelect">
-                <button type="button" class="label">모델을 선택해주세요</button>
+                <div class="box bg-3">
+                    <button id="btn" class="button button--quidel button--inverted button1">Model Choice</button>
+                </div>
                 <ul class="optionList">
                     <li class="optionItem">1번모델</li>
                     <li class="optionItem">2번모델</li>
@@ -40,12 +47,14 @@
             </div>
 
             <div class="uploadbox">
-                <p>아마 사진을 올려야될걸요?</p>
-                <button>
-                    이미지셋 업로드
+                
+                    <button class="button button--quidel button--inverted">Img Upload</button>
+                  
                 </button>
             </div>
-            <input id="cvtSub" type="submit" value="변환시작!">
+            
+                <button class="button button--quidel button--inverted" type="submit" >convert</button>
+              
         </form>
     </div>
     </div>
