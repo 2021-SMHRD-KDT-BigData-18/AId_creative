@@ -3,8 +3,7 @@
 <mapper namespace="kr.AId_creative.mapper.A_Mapper">
 
 	<!-- 로그인 -->
-	<select id="login"
-		parameterType="kr.AId_creative.entity.T_User"
+	<select id="login" parameterType="kr.AId_creative.entity.T_User"
 		resultType="kr.AId_creative.entity.T_User">
 		SELECT * FROM T_USER WHERE USER_ID=#{user_id} AND
 		USER_PW=#{user_pw}
@@ -16,20 +15,16 @@
 		INSERT INTO T_USER VALUES
 		(#{user_id},#{user_pw},#{user_nick})
 	</insert>
-	
+
 	<!-- ID 중복확인 -->
-	<select id="checkuser" parameterType="kr.AId_creative.entity.T_User"
+	<select id="checkuser"
+		parameterType="kr.AId_creative.entity.T_User"
 		resultType="kr.AId_creative.entity.T_User">
 		SELECT USER_PW,USER_NICK FROM T_USER
-		WHERE USER_ID=#{user_id}
+		WHERE
+		USER_ID=#{user_id}
 	</select>
-	
+
 
 
 </mapper>
- 
-
-
- 
- 
-

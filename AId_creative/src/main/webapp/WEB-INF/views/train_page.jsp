@@ -25,7 +25,7 @@
     <div class="pageSection">
         <h3>학습 페이지</h3>
         <div class="uploadpage">
-            <form class="uploadform">
+            <form class="uploadform" action="http://125.136.66.101:5500/train_page" enctype="multipart/form-data">
                 <input id="modelNameInput" type="text" placeholder="모델의 이름을 정해주세요">
                 <div class="uploadbox">
                     <p>아마 압축파일로 올려야될걸요?</p>

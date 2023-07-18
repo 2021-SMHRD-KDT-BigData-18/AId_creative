@@ -20,17 +20,17 @@
   </head>
     
     <body>
- <div class="logo1">AId creative</div>
+ <div class="logo1"  onclick="location.href='http://localhost:8087/creative/.html'">AId creative</div>
 
 
 
     
         <div class="login_wrapper">
             <div class="logo"> AId creative </div>
-            <form class="login_form">
-                <input id="LOGIN_ID" class="login_text" type="text" name="id" placeholder=" ID ">
-                <input id="LOGIN_PW" class="login_text" type="password" name="pw" placeholder=" PW ">
-                <button id="LOGIN_BTN" class="login_btn" type="button" disabled>Sign in</button>
+            <form class="login_form" method="POST" action="login">
+                <input id="LOGIN_ID" class="login_text" type="text" name="user_id" placeholder=" ID ">
+                <input id="LOGIN_PW" class="login_text" type="password" name="user_pw" placeholder=" PW ">
+                <button id="LOGIN_BTN" class="login_btn">Sign in</button>
                 <button id="btn-modal" class="join_btn" type="button">Sign up</button>
             </form>
 
@@ -42,10 +42,10 @@
             
                 <div class="logo"> AId creative </div>
 
-                <form class="join_form">
-                        <input id="ID" class="join_text" type="text" placeholder=" ID를 입력하세요 "> 
-                        <input id="PW" class="join_text" type="text" placeholder=" PW를 입력하세요 ">
-                        <input id="NICK" class="join_text" type="text" placeholder=" 닉네임 입력하세요 ">
+                <form class="join_form" action="register" method="POST">
+                        <input id="ID" class="join_text" type="text" name="user_id" placeholder=" ID를 입력하세요 "> 
+                        <input id="PW" class="join_text" type="text" name="user_pw" placeholder=" PW를 입력하세요 ">
+                        <input id="NICK" class="join_text" type="text" name="user_nick" placeholder=" 닉네임 입력하세요 ">
                         <button class="join_btn">Sign up</button>
                 </form>
 
