@@ -29,6 +29,7 @@
 </head>
 
 <body>
+ 
     <div class="logo1">AId creative</div>
     <div class="main">
        
@@ -40,7 +41,12 @@
            <!-- <button class="btn-open-popup">Join</button> -->
         </div>
     </div>
+<<<<<<< HEAD
     	</form>
+=======
+    <div>
+	</form>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-18/AId_creative.git
 
 
 
