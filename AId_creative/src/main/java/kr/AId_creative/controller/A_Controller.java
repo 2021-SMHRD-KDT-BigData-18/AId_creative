@@ -89,7 +89,7 @@ public class A_Controller {
 		if (user != null) {
 			// 로그인 성공
 			model.addAttribute("user", user);
-			return "redirect:/goHome";
+			return "redirect:/goLogin_Home";
 		} else {
 			// 로그인 실패
 			model.addAttribute("error");
