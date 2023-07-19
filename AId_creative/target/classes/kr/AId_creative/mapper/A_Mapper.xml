@@ -18,9 +18,9 @@
 
 	<!-- ID 중복확인 -->
 	<select id="check"
-		parameterType="kr.AId_creative.entity.T_User"
+		parameterType="java.lang.String"
 		resultType="kr.AId_creative.entity.T_User">
-		SELECT USER_ID, USER_NICK FROM T_USER
+		SELECT * FROM T_USER
 		WHERE
 		USER_ID=#{user_id}
 	</select>
