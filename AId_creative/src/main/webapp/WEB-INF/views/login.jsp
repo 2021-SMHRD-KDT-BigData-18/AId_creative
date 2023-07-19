@@ -19,11 +19,10 @@
   </head>
     
     <body>
- <div class="logo1"  onclick="location.href='http://localhost:8087/creative/.html'">AId creative</div>
 
     
         <div class="login_wrapper">
-            <div class="logo"> AId creative </div>
+            <div class="logo" onclick="location.href='http://localhost:8085/creative/.html'"> AId creative </div>
              <form class="login_form" method="POST" action="login"> 
                 <input id="LOGIN_ID" class="login_text" type="text" name="user_id" placeholder=" ID ">
                 <input id="LOGIN_PW" class="login_text" type="password" name="user_pw" placeholder=" PW ">
