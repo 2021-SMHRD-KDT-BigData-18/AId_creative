@@ -9,24 +9,14 @@ import kr.AId_creative.entity.T_User;
 public interface A_Mapper {
 
 	// 회원가입
-	
-//	public void signup(User_Info user);
-	
-	// 중복
-	//public int MemberCnt(String id, String pw);
-	
-	// 회원가입
-	//public ArrayList<A_Mapper> list();
-	
-	// 회원가입
-	public int register(T_User user);
+	public void register(T_User user);
 
 	public T_User login(T_User user);
 
 	public void save(T_User user);
 
 	public void userReg_service(T_User userVO);
-	
-	
+
+	public int check(String id, String nick);
 
 }
