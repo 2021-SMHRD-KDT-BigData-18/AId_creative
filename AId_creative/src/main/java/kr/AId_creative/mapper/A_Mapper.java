@@ -17,6 +17,6 @@ public interface A_Mapper {
 
 	public void userReg_service(T_User userVO);
 
-	public int check(String id, String nick);
+	public T_User check(String id);
 
 }

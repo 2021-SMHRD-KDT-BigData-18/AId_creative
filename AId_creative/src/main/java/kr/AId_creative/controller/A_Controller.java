@@ -4,11 +4,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.xml.ws.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -98,22 +100,7 @@ public class A_Controller {
 		return "redirect:/goHome";
 	}
 
-	// 중복확인 페이지
-	@PostMapping("/check")
-	public String check(HttpServletRequest req, Model model) {
-		String id = req.getParameter("user_id");
-		String nick = req.getParameter("user_nick");
-		int cnt = mapper.check(id, nick);
-
-		if (cnt == 1) {
-			HttpSession session = req.getSession(); // 초기화
-			session.setAttribute("user_id", id); // 값 설정
-			session.setAttribute("user_nick", nick);
-			return "redirect:/";
-		} else {
-			return "redirect:/login";
-		}
-	}
+	
 
 //	// 로그아웃 페이지
 //	@PostMapping("/logout")
