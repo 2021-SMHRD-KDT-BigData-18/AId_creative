@@ -25,7 +25,7 @@
     
         <div class="login_wrapper">
             <div class="logo"> AId creative </div>
-            <form class="login_form" method="POST" action="login">
+             <form class="login_form" method="POST" action="login"> 
                 <input id="LOGIN_ID" class="login_text" type="text" name="user_id" placeholder=" ID ">
                 <input id="LOGIN_PW" class="login_text" type="password" name="user_pw" placeholder=" PW ">
                 <button id="LOGIN_BTN" class="login_btn">Sign in</button>
@@ -103,6 +103,11 @@
                 modal.style.display = "none";
             }
         });
+        
+        
+  
+
+		
 
         
 
