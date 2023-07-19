@@ -18,13 +18,9 @@
             <!-- <a class="a1" href="/login" >로그인</a> -->
         </div>
         <div class="headerTab">
-            <button class="button button--quidel button--inverted" onclick="location.href=/train/">학습</button>
-            <button class="button button--quidel button--inverted" onclick="location.href=/cvt/">변환</button>
-            <button class="button button--quidel button--inverted" onclick="location.href=/my/">마이페이지</button>
-
-            <!-- <a class="a2" href="train">학습</a>
-            <a class="a2" href="cvt">변환하기</a>
-            <a class="a2" href="my">마이페이지</a> -->
+            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goTrain'">학습</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goCvt'">변환</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goMyPage'">마이페이지</button>
         </div>
     </div>
     <div class="pageSection">

@@ -46,10 +46,26 @@ public class A_Controller {
 		return "login";
 	}
 
+	// 로그인시메인 이동페이지
+	@RequestMapping("/goLogin_Home")
+	public String goLogin_Home() {
+		return "login_home";
+	}
+
 	// 학습 이동페이지
 	@RequestMapping("/goTrain")
 	public String goTrain() {
 		return "train_page";
+	}
+
+	@RequestMapping("/goCvt")
+	public String goCvt() {
+		return "cvt_page";
+	}
+
+	@RequestMapping("/goMyPage")
+	public String goMyPage() {
+		return "my_page";
 	}
 
 	// 메인
@@ -99,8 +115,6 @@ public class A_Controller {
 
 		return "redirect:/goHome";
 	}
-
-	
 
 //	// 로그아웃 페이지
 //	@PostMapping("/logout")
