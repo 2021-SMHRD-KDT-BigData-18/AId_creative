@@ -36,10 +36,16 @@ public class A_Controller {
 		return "home";
 	}
 
-	// 로그인 이동페이지
+	// 로그인으로 이동페이지
 	@RequestMapping("/goLogin")
 	public String goLogin() {
 		return "login";
+	}
+
+	// 로그인시메인 이동페이지
+	@RequestMapping("/goLogin_Home")
+	public String goLogin_Home() {
+		return "login_home";
 	}
 
 	// 학습 이동페이지
@@ -66,7 +72,7 @@ public class A_Controller {
 		if (user != null) {
 			// 로그인 성공
 			model.addAttribute("user", user);
-			return "redirect:/";
+			return "redirect:/goLogin_Home";
 		} else {
 			// 로그인 실패
 			model.addAttribute("error");

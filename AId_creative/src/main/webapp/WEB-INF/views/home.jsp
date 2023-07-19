@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="resources/css/home.css" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
 
-<script src="script.js"></script>
 <script src="https://replit.com/public/js/replit-badge-v2.js"
 	theme="dark" position="bottom-right"></script>
 <script src="./js/login.js" defer=""></script>
@@ -41,6 +40,7 @@
            <!-- <button class="btn-open-popup">Join</button> -->
         </div>
     </div>
+    	</form>
     <div>
 	</form>
 

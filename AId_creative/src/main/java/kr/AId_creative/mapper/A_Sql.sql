@@ -6,3 +6,5 @@ CREATE TABLE T_USER
     USER_PHONE VARCHAR2(30) NOT NULL,
     PRIMARY KEY (USER_ID),
 );
+
+select * from T_user

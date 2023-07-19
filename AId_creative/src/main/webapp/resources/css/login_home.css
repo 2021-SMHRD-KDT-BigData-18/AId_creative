@@ -1,52 +1,3 @@
-.logo1 {
-	margin-left: 80px;
-	margin-top: 40px;
-	color: #262626;
-	font-family: 'Lobster', cursive;
-	font-size: 40px;
-	font-weight: 100px;
-}
-
-.main {
-	height: 50px;
-	border-bottom: 1px solid black;
-	display: flex;
-	align-items: center;
-}
-
-.tab {
-	display: flex;
-	margin-left: auto;
-	margin-right: 10px;
-}
-
-/* .tab_items {
-            display: flex;
-            margin-left: auto;
-            margin-right: 10px;
-            border:none;
-            background-color: white;
-        } */
-.btn-open-popup {
-	display: flex;
-	margin-right: 10px;
-	padding-right: 30px;
-	border: none;
-	background-color: white;
-}
-
-.center {
-	display: flex;
-	margin-top: 30px;
-	margin-left: 45%;
-}
-
-h2 {
-	text-align: center;
-	padding: 20px;
-}
-
-/* Slider */
 .slick-slide {
 	height: 100px;
 }
@@ -110,16 +61,6 @@ h2 {
 	content: '';
 }
 
-        .slick-slider .slick-track,
-        .slick-slider .slick-list {
-            width: 177%;
-            margin-top: 50px;
-            -webkit-transform: translate3d(0, 0, 0);
-            -moz-transform: translate3d(0, 0, 0);
-            -ms-transform: translate3d(0, 0, 0); 
-            -o-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-        }
 .slick-track:after {
 	clear: both;
 }
@@ -169,24 +110,56 @@ h2 {
 	display: none;
 }
 
-        .slick-loading .slick-slide {
-            visibility: hidden;
-        }
-
-        .slick-vertical .slick-slide {
-            display: block;
-            height: auto;
-            border: 1px solid transparent;
-        }
-
-        .slick-arrow.slick-hidden {
-            display: none;
-        }
-        .container {
-            margin-top: 10%;
-        }
-        
-        
 .container {
 	margin-top: 10%;
+}
+
+.logo1 {
+	margin-left: 80px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	color: #262626;
+	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	font-weight: 100px;
+}
+
+.main {
+	height: 50px;
+	border-bottom: 1px solid black;
+	display: flex;
+	align-items: center;
+}
+
+.btn-open-popup {
+	border: none;
+	background-color: white;
+	margin-right: 30px;
+}
+
+.center {
+	display: flex;
+	margin-top: 30px;
+	margin-left: 45%;
+}
+
+h2 {
+	text-align: center;
+	padding: 20px;
+}
+
+.tab {
+	width: 100%;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: bold;
+	color: black;
+	display: flex;
+}
+
+.tab>a {
+	text-decoration: none;
+	color: black;
+	align-items: center;
 }

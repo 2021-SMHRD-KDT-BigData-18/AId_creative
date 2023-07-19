@@ -10,6 +10,7 @@
 	</select>
 
 	<!-- 회원가입 -->
+
 	<insert id="register"
 		parameterType="kr.AId_creative.entity.T_User">
 		INSERT INTO T_USER VALUES
@@ -27,4 +28,13 @@
 
 
 
+
+
+
+
 </mapper>
+ 
+
+
+ 
+ 
