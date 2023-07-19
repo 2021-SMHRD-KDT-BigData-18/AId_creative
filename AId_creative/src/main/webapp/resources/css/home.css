@@ -110,6 +110,16 @@ h2 {
 	content: '';
 }
 
+        .slick-slider .slick-track,
+        .slick-slider .slick-list {
+            width: 177%;
+            margin-top: 50px;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0); 
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
 .slick-track:after {
 	clear: both;
 }
@@ -159,6 +169,24 @@ h2 {
 	display: none;
 }
 
+        .slick-loading .slick-slide {
+            visibility: hidden;
+        }
+
+        .slick-vertical .slick-slide {
+            display: block;
+            height: auto;
+            border: 1px solid transparent;
+        }
+
+        .slick-arrow.slick-hidden {
+            display: none;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        
+        
 .container {
 	margin-top: 10%;
 }

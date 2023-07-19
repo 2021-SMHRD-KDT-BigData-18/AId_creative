@@ -10,7 +10,6 @@
 	</select>
 
 	<!-- 회원가입 -->
-
 	<insert id="register"
 		parameterType="kr.AId_creative.entity.T_User">
 		INSERT INTO T_USER VALUES
@@ -18,10 +17,10 @@
 	</insert>
 
 	<!-- ID 중복확인 -->
-	<select id="checkuser"
+	<select id="check"
 		parameterType="kr.AId_creative.entity.T_User"
 		resultType="kr.AId_creative.entity.T_User">
-		SELECT USER_PW,USER_NICK FROM T_USER
+		SELECT USER_ID, USER_NICK FROM T_USER
 		WHERE
 		USER_ID=#{user_id}
 	</select>
@@ -30,11 +29,4 @@
 
 
 
-
-
 </mapper>
- 
-
-
- 
- 

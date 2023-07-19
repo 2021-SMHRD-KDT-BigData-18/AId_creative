@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.AId_creative.entity.T_User;
 import kr.AId_creative.mapper.A_Mapper;
@@ -36,16 +38,10 @@ public class A_Controller {
 		return "home";
 	}
 
-	// 로그인으로 이동페이지
+	// 로그인 이동페이지
 	@RequestMapping("/goLogin")
 	public String goLogin() {
 		return "login";
-	}
-
-	// 로그인시메인 이동페이지
-	@RequestMapping("/goLogin_Home")
-	public String goLogin_Home() {
-		return "login_home";
 	}
 
 	// 학습 이동페이지
@@ -65,14 +61,17 @@ public class A_Controller {
 	@PostMapping("/login")
 	public String login(@RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw, Model model) {
 
+		String encryPassword = UserSha256.encrypt(user_pw);
 		T_User user = new T_User();
 		user.setUser_id(user_id);
-		user.setUser_pw(user_pw);
+		user.setUser_pw(encryPassword);
+
+		user = mapper.login(user);
 
 		if (user != null) {
 			// 로그인 성공
 			model.addAttribute("user", user);
-			return "redirect:/goLogin_Home";
+			return "redirect:/goHome";
 		} else {
 			// 로그인 실패
 			model.addAttribute("error");
@@ -99,32 +98,27 @@ public class A_Controller {
 		return "redirect:/goHome";
 	}
 
+	// 중복확인 페이지
+	@PostMapping("/check")
+	public String check(HttpServletRequest req, Model model) {
+		String id = req.getParameter("user_id");
+		String nick = req.getParameter("user_nick");
+		int cnt = mapper.check(id, nick);
+
+		if (cnt == 1) {
+			HttpSession session = req.getSession(); // 초기화
+			session.setAttribute("user_id", id); // 값 설정
+			session.setAttribute("user_nick", nick);
+			return "redirect:/";
+		} else {
+			return "redirect:/login";
+		}
+	}
+
 //	// 로그아웃 페이지
 //	@PostMapping("/logout")
 //	public String logout() {
 //		return "login";
-//	}
-
-	// 중복
-//	@RequestMapping("/checkuser")
-//	public String doCheck(HttpServletRequest req, Model model) {
-//		String id = req.getParameter("userid");
-//		String pw = req.getParameter("password");
-//		//int cnt = mapper.MemberCnt(id, pw);
-//
-////		if (cnt == 1) {
-////			HttpSession session = req.getSession(); // 초기화
-////			session.setAttribute("user_id", id); // 값 설정
-////			session.setAttribute("user_pw", pw);
-////			return "redirect:/";
-////		} else {
-////			return "redirect:/login";
-////		}
-//
-////			model.addAttribute("uid", id);
-////			model.addAttribute("upw", pw);
-////			
-////			return "loginok";
 //	}
 
 }
