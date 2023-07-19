@@ -1,22 +1,29 @@
 package kr.AId_creative.controller;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.AId_creative.entity.T_User;
 import kr.AId_creative.mapper.A_Mapper;
 
+@Service
 @Controller
 public class A_Controller {
 
@@ -73,22 +80,22 @@ public class A_Controller {
 		}
 	}
 
-	// 회원가입
+	// 회원가입 암호 컨트롤러
 	@PostMapping("/register")
-	public String register(HttpServletRequest req, Model model) {
-		String id = req.getParameter("user_id");
-		String pw = req.getParameter("user_pw");
-		String nick = req.getParameter("user_nick");
+	public String userRegPass(T_User userVO, Model model, HttpServletRequest request) {
 
-		T_User user = new T_User(id, pw, nick);
+		// 암호 확인
+		System.out.println("첫번째:" + userVO.getUser_pw());
+		// 비밀번호 암호화 (sha256
+		String encryPassword = UserSha256.encrypt(userVO.getUser_pw());
+		userVO.setUser_pw(encryPassword);
+		System.out.println("두번째:" + userVO.getUser_pw());
+		// 회원가입 메서드
+		mapper.register(userVO);
+		// 인증 메일 보내기 메서드
+		// mailsender.mailSendWithUserKey(userVO.getUser_email(), userVO.getUser_id(),
+		// request);
 
-		System.out.println(user.getUser_id());
-		System.out.println(user.getUser_pw());
-		System.out.println(user.getUser_nick());
-
-		// ArrayList<A_Mapper> member = mapper.list();
-		// model.addAttribute("loginid", member);
-		mapper.register(user);
 		return "redirect:/goHome";
 	}
 

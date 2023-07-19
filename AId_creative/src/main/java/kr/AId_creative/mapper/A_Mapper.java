@@ -22,6 +22,10 @@ public interface A_Mapper {
 	public int register(T_User user);
 
 	public T_User login(T_User user);
+
+	public void save(T_User user);
+
+	public void userReg_service(T_User userVO);
 	
 	
 
