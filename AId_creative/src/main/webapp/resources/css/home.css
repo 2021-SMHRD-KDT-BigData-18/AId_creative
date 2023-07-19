@@ -93,7 +93,7 @@
 
         .slick-slider .slick-track,
         .slick-slider .slick-list {
-            width: 150%;
+            width: 177%;
             margin-top: 50px;
             -webkit-transform: translate3d(0, 0, 0);
             -moz-transform: translate3d(0, 0, 0);
@@ -166,3 +166,5 @@
         .container {
             margin-top: 10%;
         }
+        
+        
