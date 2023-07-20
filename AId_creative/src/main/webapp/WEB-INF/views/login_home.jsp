@@ -31,7 +31,7 @@
         <button class="tab" onclick="location.href='http://localhost:8085/creative/goMyPage'">마이페이지</button>
 
 
-        <form action="goLogin_Home" method="post">
+        <form action="goHome" method="post">
             <!-- <button class="btn-open-popup">Login</div> -->
             <button class="btn-open-popup" onclick="location.href='main.html'">Logout</button>
             <!-- <button class="btn-open-popup">Join</button> -->
