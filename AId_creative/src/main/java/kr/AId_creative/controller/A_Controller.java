@@ -110,5 +110,12 @@ public class A_Controller {
 			return "login";
 		}
 	}
-
+	
+	// 이메일 인증이동페이지
+	@RequestMapping("/gosignUp")
+	public String gosignUp() {
+		return "signUp";
+	}
+	
+	
 }
