@@ -43,7 +43,7 @@
                         <p id="checkResult"></p> 
                         <input id="PW" class="join_text" type="text" name="user_pw" placeholder=" PW를 입력하세요 ">
                         <input id="NICK" class="join_text" type="text" name="user_nick" placeholder=" 닉네임 입력하세요 ">
-                        <button class="join_btn">Sign up</button>
+                        <button class="join_btn" type="button" onclick="joinTry()">Sign up</button>
                 </form>
 
 
@@ -104,7 +104,7 @@
         });
         
         
-        // 해당 문서가 다 준비되면 실행한다.
+     // 해당 문서가 다 준비되면 실행한다.
         $(document).ready(function () {
   
            // 이메일 중복체크 기능
@@ -175,15 +175,15 @@
               success: function (res) {
                  if (res == 'true') {
                     alert("회원가입에 성공했어요");
-                    window.location.replace('goLogin')
+                    window.location.replace('goLogin_Home')
                  } else {
-                    alert("회원가입에 실패했어요...");
+                    alert("회원가입에 실패했어요");
                  }
   
               },
               error: function (e) {
                  // 요청이 실패하면 실행될 콜백함수
-                 alert("요청 실패!");
+                 alert("중복되어있어요");
               }
            });
         }

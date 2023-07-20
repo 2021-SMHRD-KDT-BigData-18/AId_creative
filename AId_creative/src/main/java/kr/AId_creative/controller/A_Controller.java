@@ -40,6 +40,12 @@ public class A_Controller {
 		return "home";
 	}
 
+	// 회원가입 이동페이지
+	@RequestMapping("/goRegister")
+	public String goRegister() {
+		return "register";
+	}
+
 	// 로그인 이동페이지
 	@RequestMapping("/goLogin")
 	public String goLogin() {
@@ -74,6 +80,14 @@ public class A_Controller {
 		return "home";
 	}
 
+	// 로그아웃 페이지
+	@PostMapping("/logout")
+	public String logout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.removeAttribute("user");
+		return "redirect:/goHome";
+	}
+
 	// 로그인
 	@SuppressWarnings("unused")
 	@PostMapping("/login")
@@ -96,30 +110,5 @@ public class A_Controller {
 			return "login";
 		}
 	}
-
-	// 회원가입 암호 컨트롤러
-//	@PostMapping("/register")
-//	public String userRegPass(T_User userVO, Model model, HttpServletRequest request) {
-//
-//		// 암호 확인
-//		System.out.println("첫번째:" + userVO.getUser_pw());
-//		// 비밀번호 암호화 (sha256
-//		String encryPassword = UserSha256.encrypt(userVO.getUser_pw());
-//		userVO.setUser_pw(encryPassword);
-//		System.out.println("두번째:" + userVO.getUser_pw());
-//		// 회원가입 메서드
-//		mapper.register(userVO);
-//		// 인증 메일 보내기 메서드
-//		// mailsender.mailSendWithUserKey(userVO.getUser_email(), userVO.getUser_id(),
-//		// request);
-//
-//		return "redirect:/goHome";
-//	}
-
-//	// 로그아웃 페이지
-//	@PostMapping("/logout")
-//	public String logout() {
-//		return "login";
-//	}
 
 }

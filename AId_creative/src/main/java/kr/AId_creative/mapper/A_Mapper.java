@@ -9,7 +9,7 @@ import kr.AId_creative.entity.T_User;
 public interface A_Mapper {
 
 	// 회원가입
-	public void register(T_User user);
+	public int register(T_User user);
 
 	public T_User login(T_User user);
 
