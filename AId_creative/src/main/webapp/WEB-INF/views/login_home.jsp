@@ -33,7 +33,7 @@
 
         <form action="goHome" method="post">
             <!-- <button class="btn-open-popup">Login</div> -->
-            <button class="btn-open-popup" onclick="location.href='main.html'">Logout</button>
+            <button class="btn-open-popup" onclick="location.href='goLogout'">Logout</button>
             <!-- <button class="btn-open-popup">Join</button> -->
             </from>
     </div>

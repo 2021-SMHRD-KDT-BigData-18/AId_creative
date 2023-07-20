@@ -23,10 +23,10 @@
     <div class="main">
 
         <div class="tab">
-            <from action="Login" method="POST">
+            <from action="goLogin" method="POST">
 
                 <!-- <button class="btn-open-popup">Login</div> -->
-                <button class="btn-open-popup" onclick="location.href='Login.html'">Login / Join</button>
+                <button class="btn-open-popup" onclick="location.href='goLogin'">Login / Join</button>
                 <!-- <button class="btn-open-popup">Join</button> -->
         </div>
     </div>
