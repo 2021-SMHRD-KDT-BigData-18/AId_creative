@@ -117,5 +117,11 @@ public class A_Controller {
 		return "signUp";
 	}
 	
+	// 이거아님
+//	@RequestMapping("/gosignUp")
+//	public String gosignUp() {
+//		return "signUp";
+//	}
+	
 	
 }
