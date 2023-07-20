@@ -1,3 +1,4 @@
+/* Slider */
 .slick-slide {
 	height: 100px;
 }
@@ -19,7 +20,6 @@
 	-khtml-user-select: none;
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
-	-webkit-tap-highlight-color: transparent;
 }
 
 .slick-list {
@@ -27,7 +27,7 @@
 	display: block;
 	overflow: hidden;
 	margin: 0;
-	padding: 0;
+	padding: 20;
 }
 
 .slick-list:focus {
@@ -41,7 +41,7 @@
 
 .slick-slider .slick-track, .slick-slider .slick-list {
 	width: 177%;
-	margin-top: 50px;
+	margin-top: 10px;
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
@@ -111,13 +111,12 @@
 }
 
 .container {
-	margin-top: 10%;
+	margin-top: 100px;
 }
 
 .logo1 {
-	margin-left: 80px;
-	margin-top: 40px;
-	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-left: 45%;
 	color: #262626;
 	font-family: 'Lobster', cursive;
 	font-size: 40px;
@@ -125,10 +124,16 @@
 }
 
 .main {
-	height: 50px;
-	border-bottom: 1px solid black;
-	display: flex;
+	width: 100%;
+	height: 40px;
 	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-color: black;
+	border-style: solid;
+	border-width: 3px thin;
+	margin-top: 20px;
 }
 
 .btn-open-popup {
@@ -145,21 +150,38 @@
 
 h2 {
 	text-align: center;
-	padding: 20px;
+	padding: 30px;
 }
 
 .tab {
-	width: 100%;
-	align-items: center;
-	flex-direction: row;
-	justify-content: space-around;
-	font-size: bold;
-	color: black;
-	display: flex;
+	float: left;
+	min-width: 100px;
+	max-width: 150px;
+	display: block;
+	margin: 0.5em;
+	padding: 0.5em 0.3em;
+	border: none;
+	background: none;
+	color: #000000;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	/* border: #000000; */
+	border-radius: 8%;
+	text-align: center;
 }
 
-.tab>a {
-	text-decoration: none;
-	color: black;
-	align-items: center;
+.button1 {
+	margin: 10%;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.tab:hover {
+	border-width: 1px thin;
+	border-style: solid;
 }
