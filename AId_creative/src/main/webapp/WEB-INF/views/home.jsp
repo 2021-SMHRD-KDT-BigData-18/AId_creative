@@ -1,54 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+
 <head>
-<title>Home</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title class="title">AId creative mainpage</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="resources/css/home.css" />
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title class="title">AId creative mainpage</title>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/home.css" />
 
-<script src="https://replit.com/public/js/replit-badge-v2.js"
-	theme="dark" position="bottom-right"></script>
-<script src="./js/login.js" defer=""></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
 
-<script src="https://code.jquery.com/jquery-2.2.0.min.js"
-	type="text/javascript"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-	rel="stylesheet">
-</head>
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+    <script src="./js/login.js" defer=""></script>
 
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 <body>
- 
     <div class="logo1">AId creative</div>
     <div class="main">
-       
-        <div class="tab">
 
-        <form action="goLogin" method="POST">
-            <!-- <button class="btn-open-popup">Login</div> -->
-            <button class="btn-open-popup" onclick="location.href='login.html'">Login / Join</button>
-           <!-- <button class="btn-open-popup">Join</button> -->
+        <div class="tab">
+            <from action="goLogin" method="POST">
+
+                <!-- <button class="btn-open-popup">Login</div> -->
+                <button class="btn-open-popup" onclick="location.href='goLogin'">Login / Join</button>
+                <!-- <button class="btn-open-popup">Join</button> -->
         </div>
     </div>
-    	</form>
     <div>
-	</form>
-
-
-
-
-
-
         <div class="container">
             <h2 style="font-family:Lobster">Our image sample</h2>
             <section class="customer-logos slider">
@@ -68,7 +50,38 @@
             </section>
         </div>
 
-    </div>
+
+
+
+
+        <div class="modal hidden">
+        
+            <div class="modal__background"></div>
+            <div class="modal__content">
+                <h1 style="font-family:Lobster">AId creative</h1>
+                <h3>작가님 환영합니다. <br>
+                    AId creative 입니다. <br>
+                    AId는 AI 기반으로 작가님의 그림을 학습시켜 보다 수월한 작업에 도움을 드리는 서비스 입니다.
+                </h3>
+                <ul>
+                    <li>체험
+                        샘플 이미지를 클릭하여 학습시킨 샘플oo에 원하시는 사진을 넣으시면 체험이 가능합니다.
+                    </li><br>
+                    <li>학습하기
+                        이미지 파일을 업로드하여 작가님의 그림을 학습시켜줍니다 (약 0시간 소요)
+                        > AI가 학습하는데에 최초 1회는 시간이 다소 소요됩니다
+                    </li><br>
+                    <li>변환하기
+                        학습시켜 생성된 00를 이용하여 변환된 이미지를 다운로드 합니다
+                    </li><br>
+                    <li>마이페이지
+                        한번 학습시켜놓은 oo은 마이페이지 모델 목록에서 확인 가능합니다
+                        저장되어 있는 모델들은 학습과정 생략 후 바로 변환 가능합니다
+                    </li>
+                </ul>
+                <button id="aaa">close</button>
+            </div>
+        </div>
 
     <script>
         $(document).ready(function () {
@@ -93,9 +106,19 @@
                 }]
             });
         });
+
+        function displayModal() {
+            modal.classList.toggle("hidden");
+        }
+
+
+        const closeButton = document.querySelector("#aaa");
+        const modal = document.querySelector(".modal");
+        const modalBackground = modal.querySelector(".modal__background");
+
+        modal.classList.toggle("hidden");
+        closeButton.addEventListener("click", displayModal)
+        modalBackground.addEventListener("click", displayModal);
     </script>
-
-
-   
+    </div>
 </body>
-</html>
