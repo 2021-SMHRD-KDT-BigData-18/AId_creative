@@ -9,6 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="resources/css/trainP.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
 </head>
 
 <body>
