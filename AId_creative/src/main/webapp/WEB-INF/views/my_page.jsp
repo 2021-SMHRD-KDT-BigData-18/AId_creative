@@ -16,9 +16,9 @@
 	<div class="header">
 		<div class="headerTitle">
 			<h1>AId creative</h1>
+			<form action="logout" method="post">
 			<button  class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button> 
-			<!-- <button  class="button button--quidel button--inverted" onclick="location.href=/login/">Login</button> -->
-			<!-- <a class="a1" href="/login" >로그인</a> -->
+			</form>
 		</div>
 		<div class="headerTab">
 			<button class="button button--quidel button--inverted"

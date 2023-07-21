@@ -15,8 +15,9 @@
    <div class="header">
         <div class="headerTitle">
             <h1>AId creative</h1>
-            <button  class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button> 
-            <!-- <a class="a1" href="/login" >로그인</a> -->
+            <form action="logout" method="post">
+			<button  class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button> 
+			</form>
         </div>
         <div class="headerTab">
             <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goTrain'">train</button>
