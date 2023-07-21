@@ -193,11 +193,11 @@
 		closeBtn.addEventListener("click", evt => {
 			modal.style.display = "none";
 		});
-
+		
 		//모달창의 바깥 영역을 클릭하면 꺼지게 한다.
 		modal.addEventListener("click", e => {
 			const evTarget = e.target;
-			if (evTarget.classList.contains("modal-overlay")) {
+			if (evTarget.classList.contains("close-area")) {
 				modal.style.display = "none";
 			}
 		});
