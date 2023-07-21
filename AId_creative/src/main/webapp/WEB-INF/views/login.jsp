@@ -47,9 +47,11 @@
 
 		<form class="join_form" action="register" method="POST">
 			<input id="ID" class="join_text" type="text" name="user_id"
-				placeholder=" ID를 입력하세요 "> <input id="PW" class="join_text"
-				type="text" name="user_pw" placeholder=" PW를 입력하세요 "> <input
-				id="NICK" class="join_text" type="text" name="user_nick"
+				placeholder=" ID를 입력하세요 ">
+			<p id="result"></p>
+			<input id="PW" class="join_text" type="text" name="user_pw"
+				placeholder=" PW를 입력하세요 "> <input id="NICK"
+				class="join_text" type="text" name="user_nick"
 				placeholder="NickName을 입력하세요 "> <input id="u_email"
 				class="join_text" type="text" name="u_email"
 				placeholder="Email을 입력하세요">
@@ -64,7 +66,7 @@
 				<span id="mail-check-warn"></span>
 			</div>
 
-			<button class="btn_join">Sign up</button>
+			<button id="btn_join" class="btn_join" type="button">Sign up</button>
 		</form>
 
 
@@ -78,22 +80,23 @@
 	</div>
 
 	<script type="text/javascript">
-		// 해당 문서가 다 준비되면 실행한다.
-		$(document).ready(function () {
-
-			// 이메일 중복체크 기능
-			// 사용자가 input태그에 입력했을 때 실행
-			var input = $('#ID');
-
-			// change : 값이 변경되면 실행 --> 입력과 동시X
-			// input : 값이 입력되면 실행
-			input.on('input', idCheck);
-
-			let btn_join = $('#btn_join');
-			btn_join.on('click', joinTry);
-
+	
+	
+		//모달창 버튼을 클릭하면 모달을 나타나게 한다.
+		//const modal = document.getElementById("modal");
+	
+		$('#btn-modal').on('click', function () {
+			$('#modal').show();
+			$('#modal').css('display', 'flex');
 		});
-
+		
+		// 아이디 중복 확인
+		
+		$(document).ready(function () {
+			var input = $('#ID');
+			input.on('input', idCheck);
+	    });
+		
 		//태그의 ID와 함수이름이 동일하면 안됨!
 		function idCheck() {
 			// input에 입력된 값이 DB에 있는지 확인
@@ -108,13 +111,13 @@
 			// 비동기통신(Ajax) 방식
 
 			$.ajax({
-				url: "check.do",
+				url: "check",
 				type: "post",
 				data: {
 					"user_id": value
 				},
 				success: function (res) {
-					var p = $('#checkResult');
+					var p = $('#result');
 
 					if (res == "OK") {
 						p.html('사용가능한 아이디 입니다.').css("color", "skyblue");
@@ -131,13 +134,18 @@
 
 		};
 
-		function joinTry() {
-	           let id = $('#ID').val();
+		
+		// 회원가입 눌렀을 때
+		$('#btn_join').on('click', function () {
+			//alert('회원가입완료')
+			
+			let id = $('#ID').val();
 	           let pw = $('#PW').val();
 	           let nick = $('#NICK').val();
 	           console.log(id);
 	           console.log(pw);
 	           console.log(nick);
+	           
 	           $.ajax({
 	              url: "register",
 	              type: "post",
@@ -147,40 +155,38 @@
 	                 "user_nick": nick
 	              },
 	              success: function (res) {
-	                 if (res == 'true') {
-	                    alert("회원가입에 성공했어요");
-	                    window.location.replace('goLogin_Home')
-	                 } else {
-	                    alert("회원가입에 실패했어요");
-	                 }
+						console.log(res)
+	                 	if (res=='success') {
+	                    	alert("회원가입에 성공했어요");
+	                    	window.location.replace('goLogin')
+	                 	} else {
+	                    	alert("회원가입에 실패했어요");
+	                 	}
+						
+						}
 	  
-	              },
+	              ,
 	              error: function (e) {
 	                 // 요청이 실패하면 실행될 콜백함수
 	                 alert("중복되어있어요");
 	              }
 	           });
-	</script>
+		});
+			
+		
 
-
-
-
-
-	<script>
-		const modal = document.getElementById("modal");
-
-		const modalContent = document.getElementById("modalContent");
+		// const modalContent = document.getElementById("modalContent");
 
 
 
 
 
 		//모달창 버튼을 클릭하면 모달을 나타나게 한다.
-		const btnModal = document.getElementById("btn-modal");
-		btnModal.addEventListener("click", e => {
-			modal.style.display = "flex";
+		//const btnModal = document.getElementById("btn-modal");
+		//btnModal.addEventListener("click", e => {
+		//	modal.style.display = "flex";
 
-		});
+		//});
 
 		//모달창의 x를 누르면 모달창이 사라진다.
 		const closeBtn = modal.querySelector(".close-area");
@@ -203,12 +209,6 @@
 			}
 		});
 
-
-
-
-	</script>
-
-	<script type="text/javascript">
 	/*이메일 인증*/
 	$('#mail-Check-Btn').click(function() {
 		var email = $('#u_email').val();

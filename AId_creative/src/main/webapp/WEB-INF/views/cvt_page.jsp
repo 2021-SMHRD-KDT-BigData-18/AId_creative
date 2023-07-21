@@ -15,13 +15,13 @@
    <div class="header">
         <div class="headerTitle">
             <h1>AId creative</h1>
-            <button  class="button button--quidel button--inverted" onclick="location.href=/login/">로그인</button>
+            <!-- <button  class="button button--quidel button--inverted" onclick="location.href=/login/">Login</button> -->
             <!-- <a class="a1" href="/login" >로그인</a> -->
         </div>
         <div class="headerTab">
-            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goTrain'">학습</button>
-            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goCvt'">변환</button>
-            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goMyPage'">마이페이지</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goTrain'">train</button>
+            <button class="button button--quidel button--inverted selected" onclick="location.href='http://localhost:8085/creative/goCvt'">convert</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goMyPage'">mypage</button>
         </div>
     </div>
     <div class="pageSection">

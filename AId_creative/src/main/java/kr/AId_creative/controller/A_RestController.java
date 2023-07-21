@@ -39,7 +39,6 @@ public class A_RestController {
 		}
 	}
 
-	// 회원가입 페이지
 	@PostMapping("register")
 	public String register(HttpServletRequest req, Model model) {
 		String id = req.getParameter("user_id");
@@ -67,8 +66,40 @@ public class A_RestController {
 		// mailsender.mailSendWithUserKey(userVO.getUser_email(), userVO.getUser_id(),
 		// request);
 
-		return "true";
+		return "success";
 
 	}
+
+	// 카카오 소셜 로그인
+//			@PostMapping("kakaologin")
+//			public String kakaologin(HttpServletRequest req, Model model) {
+//				System.out.println("카카오로그인");
+//				System.out.println(req.getParameter("kakaoemail"));
+//				System.out.println(req.getParameter("kakaoname"));
+//				System.out.println(req.getParameter("kakaobirth"));
+//				
+//				String kakaoid = req.getParameter("kakaoemail");
+//				
+//				T_User user = new T_User();
+//				
+//				user.setUser_id(kakaoid);
+//				
+//				// loginLookup table 만들기
+//				int result_lookup = user.loginLookup(user);
+//				
+//				if(result_lookup == 0 ) {
+//					System.out.println("카카오 회원 정보 설정");
+//					
+//					req.setAttribute("kakaoid", req.getParameter("kakaoid"));
+//					req.setAttribute("kakaoname", req.getParameter("kakaoname"));
+//					req.setAttribute("kakaobirth", req.getParameter("kakaobirth"));
+//					req.setAttribute("kakaoemail", req.getParameter("kakaoemail"));
+//					
+//					return "goRegister";
+//				}
+//				
+//			}else {
+//				user.loginOnnick
+//			}
 
 }

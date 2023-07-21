@@ -68,7 +68,10 @@ h3 {
     border-style: solid;
 } 
 
-
+.selected{
+	background-color: black !important;
+	color:white !important;
+}
 
 
 .a2{
