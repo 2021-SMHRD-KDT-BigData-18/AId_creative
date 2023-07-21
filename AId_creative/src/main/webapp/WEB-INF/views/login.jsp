@@ -132,40 +132,34 @@
 		};
 
 		function joinTry() {
-			let id = $('#ID').val();
-			let pw = $('#PW').val();
-			let nick = $('#NICK').val();
-			console.log(id);
-			console.log(pw);
-			console.log(nick);
-			$.ajax({
-				url: "join.do",
-				type: "post",
-				data: {
-					"user_id": id,
-					"user_pw": pw,
-					"user_nick": nick
-				},
-				success: function (res) {
-					if (res == 'true') {
-						swal.fire({
-							title: '성공!',
-							text:'회원가입에 성공했어요',
-							imgUrl: '',
-						})
-							
-					} else {
-						swal.fire('로그인 실패!', "아이디와 비밀번호를 확인해 주세요", 'warning');
-					}
-
-				},
-				error: function (e) {
-					// 요청이 실패하면 실행될 콜백함수
-					alert("요청 실패!");
-				}
-			});
-		}
-
+	           let id = $('#ID').val();
+	           let pw = $('#PW').val();
+	           let nick = $('#NICK').val();
+	           console.log(id);
+	           console.log(pw);
+	           console.log(nick);
+	           $.ajax({
+	              url: "register",
+	              type: "post",
+	              data: {
+	                 "user_id": id,
+	                 "user_pw": pw,
+	                 "user_nick": nick
+	              },
+	              success: function (res) {
+	                 if (res == 'true') {
+	                    alert("회원가입에 성공했어요");
+	                    window.location.replace('goLogin_Home')
+	                 } else {
+	                    alert("회원가입에 실패했어요");
+	                 }
+	  
+	              },
+	              error: function (e) {
+	                 // 요청이 실패하면 실행될 콜백함수
+	                 alert("중복되어있어요");
+	              }
+	           });
 	</script>
 
 
