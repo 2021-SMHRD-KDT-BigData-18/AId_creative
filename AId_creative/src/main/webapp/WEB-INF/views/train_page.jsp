@@ -20,7 +20,7 @@
             <!-- <a class="a1" href="/login" >로그인</a> -->
         </div>
         <div class="headerTab">
-			<button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goTrain'">학습</button>
+        	<button class="button button--quidel button--inverted selected" onclick="location.href='http://localhost:8085/creative/goTrain'">학습</button>           
             <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goCvt'">변환</button>
             <button class="button button--quidel button--inverted" onclick="location.href='http://localhost:8085/creative/goMyPage'">마이페이지</button>
         </div>

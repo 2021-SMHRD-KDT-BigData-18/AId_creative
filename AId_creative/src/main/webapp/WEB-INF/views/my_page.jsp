@@ -25,7 +25,7 @@
 				onclick="location.href=/train/">학습</button>
 			<button class="button button--quidel button--inverted"
 				onclick="location.href=/cvt/">변환</button>
-			<button class="button button--quidel button--inverted"
+			<button class="button button--quidel button--inverted selected"
 				onclick="location.href=/my/">마이페이지</button>
 
 			<!-- <a class="a2" href="train">학습</a>
