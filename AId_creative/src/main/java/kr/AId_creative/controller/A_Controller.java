@@ -122,6 +122,10 @@ public class A_Controller {
 		return "king_page";
 	}
 
-	
+	// train샘플
+		@RequestMapping("/gokking")
+		public String gokking() {
+			return "kking_page";
+		}
 
 }
