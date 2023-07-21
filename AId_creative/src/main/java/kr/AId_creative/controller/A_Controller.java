@@ -116,5 +116,11 @@ public class A_Controller {
 	public String gosignUp() {
 		return "signUp";
 	}
+	//cvt샘플
+	@RequestMapping("/goking")
+	public String goking() {
+		return "king_page";
+	}
+
 
 }
