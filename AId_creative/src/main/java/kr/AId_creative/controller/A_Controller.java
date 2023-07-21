@@ -122,5 +122,6 @@ public class A_Controller {
 		return "king_page";
 	}
 
+	
 
 }
