@@ -133,5 +133,11 @@ public class A_Controller {
 		public String go_tsample() {
 			return "t_sample";
 		}
+		
+		//a_sample
+		@RequestMapping("/go_asample")
+		public String go_asample() {
+			return "a_sample";
+		}
 
 }
