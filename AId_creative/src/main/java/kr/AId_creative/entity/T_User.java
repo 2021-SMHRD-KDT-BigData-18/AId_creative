@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor 
+@NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class T_User {
@@ -15,7 +15,7 @@ public class T_User {
 	private String user_pw;
 	// 회원 닉네임
 	private String user_nick;
+	// 회원 이메일
+	private String user_email;
 
 }
-
-

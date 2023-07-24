@@ -127,5 +127,11 @@ public class A_Controller {
 		public String gokking() {
 			return "kking_page";
 		}
+		
+	//t_sample
+		@RequestMapping("/go_tsample")
+		public String go_tsample() {
+			return "t_sample";
+		}
 
 }
