@@ -19,6 +19,13 @@
 <script src="https://replit.com/public/js/replit-badge-v2.js"
 	theme="dark" position="bottom-right"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>		
+
 
 </head>
 
@@ -128,7 +135,8 @@
 				},
 				error: function (e) {
 					// 요청이 실패하면 실행될 콜백함수
-					alert("요청 실패!");
+					// alert("요청 실패!");
+					swal("요청 실패","다시 시도하세요", "error");
 				}
 			});
 
@@ -152,15 +160,22 @@
 	              data: {
 	                 "user_id": id,
 	                 "user_pw": pw,
-	                 "user_nick": nick
+	                 "user_nick": nick,
+	                 dataType : "json"
 	              },
 	              success: function (res) {
 						console.log(res)
 	                 	if (res=='success') {
-	                    	alert("회원가입에 성공했어요");
-	                    	window.location.replace('goLogin')
+	                 		swal({title:"환영합니다",text:"회원가입 성공!",icon:"success"}
+	                 		 ,function(){
+             					 window.location.replace('goLogin_Home');
+         						 });
+	                    	// alert("회원가입에 성공했어요");
+	                    	// window.location.replace('goLogin')
+	                 		
+	                 	
 	                 	} else {
-	                    	alert("회원가입에 실패했어요");
+	                    	swal("회원가입에 실패했어요","다시 시도하세요", "error");
 	                 	}
 						
 						}
@@ -168,11 +183,10 @@
 	              ,
 	              error: function (e) {
 	                 // 요청이 실패하면 실행될 콜백함수
-	                 alert("중복되어있어요");
+	            	  swal("실패했어요","다시 시도하세요", "error");
 	              }
 	           });
 		});
-			
 		
 
 		// const modalContent = document.getElementById("modalContent");
@@ -209,27 +223,30 @@
 			}
 		});
 
-	/*이메일 인증*/
-	$('#mail-Check-Btn').click(function() {
-		var email = $('#u_email').val();
-		console.log(email);
-		var checkEmail = $('.mail-check-input');
 
-		$.ajax({
-			url : 'checkEmail',
-			type : 'post',
-			data : {
-				"u_email" : email
-			},
-			success : function(data) {
-				console.log(data);
-				checkEmail.attr('disabled', false);
-				code = data;
-				alert('인증번호가 전송되었습니다.');
-			}
+		/*이메일 인증*/
+		$('#mail-Check-Btn').click(function() {
+			var email = $('#u_email').val();
+			console.log(email);
+			var checkEmail = $('.mail-check-input');
+
+			$.ajax({
+				url : 'checkEmail',
+				type : 'post',
+				data : {
+					"u_email" : email
+				},
+				success : function(data) {
+					console.log(data);
+					checkEmail.attr('disabled', false);
+					code = data;
+					// alert('인증번호가 전송되었습니다.');
+             		swal("인증번호가 전송되었습니다.","메일을 확인하세요","success")
+
+				}
+			})
 		})
-	})
-
+		
 	// 인증번호 비교 
 	// blur -> focus가 벗어나는 경우 발생
 	$('.mail-check-input').blur(
