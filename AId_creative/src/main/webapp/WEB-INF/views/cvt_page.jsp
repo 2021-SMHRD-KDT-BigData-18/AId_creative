@@ -28,7 +28,7 @@
     <div class="pageSection">
     
     <div class="cvtpage">
-        <form class="cvtform">
+    	<form class="cvtform" action="http://125.136.66.101:5500/api/insert_data" method="post" enctype="multipart/form-data">
             <!-- <select name="modelName" id="modelNameSelect">
             </select> -->
 
