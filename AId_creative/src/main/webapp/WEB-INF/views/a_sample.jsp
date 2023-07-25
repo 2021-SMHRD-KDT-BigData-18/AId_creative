@@ -56,16 +56,16 @@
                 </div>
 
 
-                <h3>Do you want to save it?</h3>
                 <div class="chobutton">
-                <button class="Choice button">Yes</button>
-                <button class="Choice button">No</button>
+                <button class="Choice_button">체험해보기</button>
+                
                 </div>
             </form>
         </div>
     </div>
 
     <script>
+    
         function DropFile(dropAreaId, fileListId) {
     let dropArea = document.getElementById(dropAreaId);
     let fileList = document.getElementById(fileListId);
