@@ -15,14 +15,16 @@
    <div class="header">
         <div class="headerTitle">
             <h1 onclick="location.href='goLogin_Home'">AId creative</h1>
-            <button  class="button button--quidel button--inverted" onclick="location.href=/login/">로그인</button>
+            <form action="goHome" method="post">
+            <button  class="button button--quidel button--inverted" >Logout</button>
+            </form>
             
         </div>
         <div class="headerTab">
             <button class="button button--quidel button--inverted" onclick="location.href='goTrain'">학습</button>
             <button class="button button--quidel button--inverted" onclick="location.href='goCvt'">변환</button>
             <button class="button button--quidel button--inverted" onclick="location.href='goMyPage'">마이페이지</button>
-            <button class="button button--quidel button--inverted" onclick="location.href='king'">변환샘플</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='go_tsample'">변환샘플</button>
             
         </div>
         <form action="goking" method="get"> 
