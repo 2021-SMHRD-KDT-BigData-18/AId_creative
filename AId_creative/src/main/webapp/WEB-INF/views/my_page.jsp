@@ -15,18 +15,19 @@
 <body>
 	<div class="header">
 		<div class="headerTitle">
-			<h1>AId creative</h1>
+		
+			<h1 onclick="location.href='goLogin_Home'">AId creative</h1>
 			<form action="logout" method="post">
 			<button  class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button> 
 			</form>
 		</div>
 		<div class="headerTab">
 			<button class="button button--quidel button--inverted"
-				onclick="location.href=/train/">train</button>
+				onclick="location.href='goTrain'">train</button>
 			<button class="button button--quidel button--inverted"
-				onclick="location.href=/cvt/">convert</button>
+				onclick="location.href='goCvt'">convert</button>
 			<button class="button button--quidel button--inverted selected"
-				onclick="location.href=/my/">mypage</button>
+				onclick="location.href='goMyPage'">mypage</button>
 
 			<!-- <a class="a2" href="train">학습</a>
             <a class="a2" href="cvt">변환하기</a>

@@ -14,7 +14,7 @@
 <body>
    <div class="header">
         <div class="headerTitle">
-            <h1>AId creative</h1>
+            <h1 onclick="location.href='goLogin_Home'">AId creative</h1>
             <form action="logout" method="post">
 			<button  class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button> 
 			</form>
