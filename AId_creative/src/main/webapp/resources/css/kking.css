@@ -1,7 +1,7 @@
 body {
     background-color: white;
     color: rgb(15, 15, 15);
-    margin: 0px;
+    margin: 30px auto;
 }
 
 h3 {
@@ -48,6 +48,7 @@ width: 100%;
     position: relative;
      top: 50%; 
      left: 50%; 
+     font-size:50px
    /*  transform: translate(-50%, -50%); */
     
 }
