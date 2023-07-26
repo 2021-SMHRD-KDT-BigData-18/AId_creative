@@ -13,12 +13,11 @@
 </head>
 
 <body>
-	<div class="header">
-		<div class="headerTitle">
-		
-			<h1 onclick="location.href='goLogin_Home'">AId creative</h1>
-			
-		</div>
+	   <div class="header">
+        <div class="headerTitle">
+            <h1 onclick="location.href='goLogin_Home'">AId creative</h1>
+           
+        </div>
 		<div class="headerTab">
 			<button class="button button--quidel button--inverted"
 				onclick="location.href='goTrain'">train</button>
