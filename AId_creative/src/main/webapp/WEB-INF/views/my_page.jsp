@@ -17,9 +17,7 @@
 		<div class="headerTitle">
 		
 			<h1 onclick="location.href='goLogin_Home'">AId creative</h1>
-			<form action="logout" method="post">
-			<button  class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button> 
-			</form>
+			
 		</div>
 		<div class="headerTab">
 			<button class="button button--quidel button--inverted"
@@ -32,6 +30,9 @@
 			<!-- <a class="a2" href="train">학습</a>
             <a class="a2" href="cvt">변환하기</a>
             <a class="a2" href="my">마이페이지</a> -->
+            <form action="logout" method="post">
+			<button  class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button> 
+			</form>
 		</div>
 	</div>
 	<div class="pageSection">
