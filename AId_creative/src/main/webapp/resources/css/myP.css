@@ -1,7 +1,7 @@
 body {
     background-color: white;
     color: white;
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 h3 {
@@ -43,6 +43,7 @@ width: 100%;
     color: rgb(0, 0, 0);
     text-decoration-line: none;
     font-family: Lobster;
+    font-size:50px;
     /* position: -webkit-sticky;
     text-align: center; */
     position: relative;
@@ -137,10 +138,7 @@ input[type=text]:focus{
 
 
 
-* {
-  margin: 0;
-  padding: 0;
-}
+
 html {
   font-size: 10px;
 }
