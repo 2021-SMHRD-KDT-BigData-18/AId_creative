@@ -19,9 +19,9 @@
             <button class="button button--quidel button--inverted" onclick="location.href=/logout/">Logout</button>
         </div>
         <div class="headerTab">
-            <button class="button button--quidel button--inverted" onclick="location.href=/train/">train</button>
-            <button class="button button--quidel button--inverted" onclick="location.href=/cvt/">covert</button>
-            <button class="button button--quidel button--inverted" onclick="location.href=/my/">mypage</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/train/">Train</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/cvt/">Covert</button>
+            <button class="button button--quidel button--inverted" onclick="location.href=/my/">MyPage</button>
         </div>
     </div>
     <div class="pageSection">

@@ -22,11 +22,11 @@
         </div>
 		<div class="headerTab">
 			<button class="button button--quidel button--inverted"
-				onclick="location.href='goTrain'">train</button>
+				onclick="location.href='goTrain'">Train</button>
 			<button class="button button--quidel button--inverted"
-				onclick="location.href='goCvt'">convert</button>
+				onclick="location.href='goCvt'">Convert</button>
 			<button class="button button--quidel button--inverted selected"
-				onclick="location.href='goMyPage'">mypage</button>
+				onclick="location.href='goMyPage'">MyPage</button>
 
 			<!-- <a class="a2" href="train">학습</a>
             <a class="a2" href="cvt">변환하기</a>

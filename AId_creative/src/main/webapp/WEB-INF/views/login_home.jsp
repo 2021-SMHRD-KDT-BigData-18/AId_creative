@@ -30,7 +30,6 @@
         <button class="tab" onclick="location.href='goCvt'">convert</button>
         <button class="tab" onclick="location.href='goMyPage'">mypage</button>
 
-
         <form action="goHome" method="post">
             <!-- <button class="btn-open-popup">Login</div> -->
             <button class="btn-open-popup" onclick="location.href='goLogout'">Logout</button>
