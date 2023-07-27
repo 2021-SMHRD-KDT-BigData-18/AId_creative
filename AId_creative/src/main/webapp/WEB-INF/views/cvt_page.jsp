@@ -20,11 +20,11 @@
         </div>
         <div class="headerTab">
          
-            <button class="button button--quidel button--inverted" onclick="location.href='goTrain'">train</button>
-            <button class="button button--quidel button--inverted" onclick="location.href='goCvt'">convert</button>
-            <button class="button button--quidel button--inverted" onclick="location.href='goMyPage'">mypage</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='goTrain'">Train</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='goCvt'">Convert</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='goMyPage'">MyPage</button>
             
-          <button class="button button--quidel button--inverted" onclick="location.href='go_tsample'">변환샘플</button> 
+        <!--   <button class="button button--quidel button--inverted" onclick="location.href='go_tsample'">변환샘플</button>  -->
            <form action="goHome" method="post">
             <button  class="button button--quidel button--inverted" onclick="location.href='logout'">Logout</button>
             </form>
