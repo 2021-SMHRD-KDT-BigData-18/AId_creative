@@ -21,9 +21,5 @@ public class T_Image {
 	private String img_prompt;
 	// 이미지 원본
 	private String img_origin;
-	// 모델 이름
-	// private String model_name;
-	// 회원 닉네임
-	// private String user_nick;
 
 }

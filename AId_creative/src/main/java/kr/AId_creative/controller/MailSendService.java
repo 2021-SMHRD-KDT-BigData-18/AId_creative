@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MailSendService {
-	
+
 	@Autowired
 	private JavaMailSender mailSender;
 	private int authNumber;
@@ -55,5 +55,3 @@ public class MailSendService {
 		}
 	}
 }
-
-
