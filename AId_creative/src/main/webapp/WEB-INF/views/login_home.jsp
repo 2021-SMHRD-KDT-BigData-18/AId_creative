@@ -26,9 +26,9 @@
  <div class="logo1">AId creative</div>
     <div class="main">
 
-        <button class="tab" onclick="location.href='http://localhost:8085/creative/goTrain'">train</button>
-        <button class="tab" onclick="location.href='http://localhost:8085/creative/goCvt'">convert</button>
-        <button class="tab" onclick="location.href='http://localhost:8085/creative/goMyPage'">mypage</button>
+        <button class="tab" onclick="location.href='goTrain'">train</button>
+        <button class="tab" onclick="location.href='goCvt'">convert</button>
+        <button class="tab" onclick="location.href='goMyPage'">mypage</button>
 
 
         <form action="goHome" method="post">
