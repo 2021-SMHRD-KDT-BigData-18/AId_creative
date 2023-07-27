@@ -139,21 +139,3 @@
 }
 
 
-#Choice_button{
-    float: left;
-        min-width: 100px;
-        max-width: 150px;
-        display: block;
-        margin: 0.5em;
-        padding: 0.5em 0.3em;
-        border: none;
-        background: none;
-        color: #000000;
-        vertical-align: middle;
-        position: relative;
-        z-index: 1;
-        -webkit-backface-visibility: hidden;
-        -moz-osx-font-smoothing: grayscale;
-        border-radius: 8%;
-        text-align: center;
-}

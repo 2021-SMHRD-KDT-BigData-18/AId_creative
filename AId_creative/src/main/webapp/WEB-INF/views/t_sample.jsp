@@ -26,9 +26,9 @@
            
         </div>
         <div class="headerTab">
-            <button class="button button--quidel button--inverted" onclick="location.href='goTrain'">학습</button>
-            <button class="button button--quidel button--inverted" onclick="location.href='goCvt'">변환</button>
-            <button class="button button--quidel button--inverted" onclick="location.href='goMyPage'">마이페이지</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='goTrain'">Train</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='goCvt'">Convert</button>
+            <button class="button button--quidel button--inverted" onclick="location.href='goMyPage'">MyPage</button>
         </div>
     </div>
     <div class="pageSection">
