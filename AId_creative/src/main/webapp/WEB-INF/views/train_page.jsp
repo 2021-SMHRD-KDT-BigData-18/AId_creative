@@ -61,6 +61,7 @@
                 </div>
               </div>
             </div>
+            <button class="st_but">train start</button>
           </div>
         </div>
     </div>

@@ -41,6 +41,7 @@
               <label class="file-label" for="chooseFile">Choose File</label>
               <input class="file" id="chooseFile" type="file" multiple onchange="dropFile.handleFiles(this.files)">
             </div>
+            <button class="st_but">convert start</button>
     </div>
     </div>
     <script>
