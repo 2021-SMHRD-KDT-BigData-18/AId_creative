@@ -18,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import kr.AId_creative.entity.T_Image;
 import kr.AId_creative.entity.T_User;
 import kr.AId_creative.mapper.A_Mapper;
 
@@ -51,7 +53,9 @@ public class A_Controller {
 
 	// 로그인시 메인이동페이지
 	@RequestMapping("/goLogin_Home")
-	//public String goLogin_Home(HttpServletRequest request, @RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw, Model model) {
+	// public String goLogin_Home(HttpServletRequest request,
+	// @RequestParam("user_id") String user_id, @RequestParam("user_pw") String
+	// user_pw, Model model) {
 	public String goLogin_Home(@SessionAttribute("user") T_User users, HttpServletRequest request) {
 //		String encryPassword = UserSha256.encrypt(user_pw);
 //		T_User user = new T_User();
@@ -64,7 +68,7 @@ public class A_Controller {
 		T_User user = (T_User) session.getAttribute("user");
 		System.out.println("로그인후");
 		System.out.println(users);
-		
+
 		if (users != null) {
 			return "login_home";
 		} else {
@@ -112,7 +116,8 @@ public class A_Controller {
 	@SuppressWarnings("unused")
 	@RequestMapping("/login")
 //	public String login(@RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw, Model model) {
-	public String login(@RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw, HttpSession session) {
+	public String login(@RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw,
+			HttpSession session) {
 		String encryPassword = UserSha256.encrypt(user_pw);
 		T_User user = new T_User();
 		user.setUser_id(user_id);
@@ -136,7 +141,7 @@ public class A_Controller {
 	@PostMapping("/logout")
 //	/public String logout(HttpServletRequest request) {
 	public String logout(HttpSession session) {
-		//HttpSession session = request.getSession();
+		// HttpSession session = request.getSession();
 		session.removeAttribute("user");
 		return "redirect:/goHome";
 	}
@@ -147,9 +152,20 @@ public class A_Controller {
 		return "cvt_page";
 	}
 
-	// 마이페이지
-	@RequestMapping("/goMyPage")
-	public String goMyPage() {
+	// 마이페이지 ( 이미지 조회 )
+	@GetMapping("/goMyPage")
+	public String goMyPage(@SessionAttribute("user") T_User user, Model model) {
+		// HttpSession --> session
+		// 1. Board 파라미터 수집 가능
+		// 2. 자료형 name값
+		// 3. url path값에 보내줄 데이터를 포함시켜서 수집하는 방법
+		// >>>>> @PathVariable
+		// 1. DB에서 게시글 한개를 조회해오기
+		ArrayList<T_Image> result = mapper.my_page(user.getUser_id());
+		System.out.println(result);
+		// 2. 조회한 게시글을 model 담아주기
+		model.addAttribute("result", result);
+		// 3. boardContent.jsp로 forward방식으로 이동
 		return "my_page";
 	}
 

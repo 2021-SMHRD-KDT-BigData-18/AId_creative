@@ -2,8 +2,10 @@ package kr.AId_creative.mapper;
 
 import java.util.ArrayList;
 
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Service;
 
+import kr.AId_creative.entity.T_Image;
 import kr.AId_creative.entity.T_User;
 
 public interface A_Mapper {
@@ -18,5 +20,15 @@ public interface A_Mapper {
 	public void userReg_service(T_User userVO);
 
 	public T_User check(String id);
+
+	@Select("SELECT * FROM T_IMAGE WHERE USER_ID = #{n1}")
+	public ArrayList<T_Image> my_page(String n1);
+
+
+
+	
+	
+	
+	
 
 }
