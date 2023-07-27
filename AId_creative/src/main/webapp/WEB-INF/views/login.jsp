@@ -30,12 +30,11 @@
 </head>
 
 <body>
-
 	<div class="login_wrapper">
 		<div class="logo"
-			oneclick="location.href='http://localhost:8087/creative/.html'">
+			onclick="location.href='goHome'">
 			AId creative</div>
-		<form class="login_form" method="POST" action="login">
+		<form class="login_form" method="post" action="login">
 			<input id="LOGIN_ID" class="login_text" type="text" name="user_id"
 				placeholder=" ID "> <input id="LOGIN_PW" class="login_text"
 				type="password" name="user_pw" placeholder=" PW ">
