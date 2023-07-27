@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,15 +41,18 @@
 		<div class="cvtpage">
 			<!-- <form class="cvtform"> -->
 			<!-- <select name="modelName" id="modelNameSelect">
+
             </select> -->
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>그림체목록</strong>
+				
+				<!-- 	<strong>그림체목록</strong>
 					<p>학습해 놓으신 그림체를 안내해드립니다.</p>
 				</div>
 				<div class="board_list_wrap">
 					<div class="board_list">
 						<div class="top">
+							
 							<div class="num">번호</div>
 							<div class="title">제목</div>
 							<div class="date">작성일</div>
@@ -66,6 +71,37 @@
 							</div>
 							<div class="date">2022.12.16</div>
 						</div>
+						-->
+						
+						<div>  
+						<table>
+						<thead>
+						<td>이미지번호</td>
+						<td>이미지이름</td>
+						<td>회원아이디</td>
+						<td>모델번호</td>
+						<td>이미지표시</td>
+						</thead>
+							<c:forEach var="item" items="${result}">
+							
+								<tr>
+     								<td>${item.img_code}</td>
+     								<td><div onclick="location.href='http://125.136.66.101:5500/download?img_code=${item.img_code}'">${item.img_name}</div></td>
+     								<td>${item.user_id}</td>
+     								<td>${item.model_code}</td>
+     								<td>${item.img_prompt}</td>
+     							</tr>
+     							
+							</c:forEach>
+							
+     						</table>
+     						
+						</div>
+						
+						
+							
+							
+							
 
 					</div>
 					<div class="board_page">

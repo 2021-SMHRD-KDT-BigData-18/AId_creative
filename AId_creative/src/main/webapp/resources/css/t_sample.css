@@ -1,7 +1,7 @@
  body {
         background-color: white;
         color: white;
-        margin: 30px auto;
+        margin: 50px auto;
     }
 
     h3 {
@@ -42,7 +42,7 @@
         color: rgb(0, 0, 0);
         text-decoration-line: none;
         font-family: Lobster;
-		font-size:50px;
+
         position: relative;
         top: 50%;
         left: 50%;
@@ -138,10 +138,4 @@
     border-right-width: 1px;
 }
 
-/*
-.Choice_button{
-    border: 1px solid #000000;
-    text-align: center;
-    display: inline-block;
-}
-*/
+
