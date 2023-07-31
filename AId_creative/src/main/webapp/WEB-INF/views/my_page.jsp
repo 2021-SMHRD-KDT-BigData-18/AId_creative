@@ -15,6 +15,23 @@
 </head>
 
 <body>
+	   <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<c:set var="cpath" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+<link rel="stylesheet" href="resources/css/myP.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
+</head>
+
+<body>
 	   <div class="header">
         <div class="headerTitle">
             <h1 onclick="location.href='goLogin_Home'">AId creative</h1>
@@ -76,20 +93,20 @@
 						<div>  
 						<table>
 						<thead>
-						<td>이미지번호</td>
-						<td>이미지이름</td>
-						<td>회원아이디</td>
-						<td>모델번호</td>
-						<td>이미지표시</td>
+						<td class="title">이미지번호</td>
+						<td class="title">이미지이름</td>
+						<td class="title">회원아이디</td>
+						<td class="title">모델번호</td>
+						<td class="title">이미지표시</td>
 						</thead>
 							<c:forEach var="item" items="${result}">
 							
 								<tr>
-     								<td>${item.img_code}</td>
-     								<td><div onclick="location.href='http://125.136.66.101:5500/download?img_code=${item.img_code}'">${item.img_name}</div></td>
-     								<td>${item.user_id}</td>
-     								<td>${item.model_code}</td>
-     								<td>${item.img_prompt}</td>
+     								<td class="box">${item.img_code}</td>
+     								<td class="box"><div onclick="location.href='http://125.136.66.101:5500/download?img_code=${item.img_code}'">${item.img_name}</div></td>
+     								<td class="box">${item.user_id}</td>
+     								<td class="box">${item.model_code}</td>
+     								<td class="box">${item.img_prompt}</td>
      							</tr>
      							
 							</c:forEach>
