@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="resources/css/kking.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
@@ -32,6 +34,7 @@
         <div id="root">
           <h2 class="title">File Upload</h2>
           <hr>
+          <form class="cvtform" action="http://220.80.33.73:9000/CVT" method="post" enctype="multipart/form-data">
           <div class="contents">
             <div class="upload-box">
               <div id="drop-file" class="drag-file">
@@ -39,12 +42,22 @@
                 <p class="message">Drag files to upload</p>
               </div>
               <label class="file-label" for="chooseFile">Choose File</label>
-              <input class="file" id="chooseFile" type="file" multiple onchange="dropFile.handleFiles(this.files)">
             </div>
+              <input name="username" value="${user.user_id }" style="visibility: hidden;">
+              <input class="file" name="uploadFile" id="chooseFile" type="file" style="visibility: hidden;" onchange="dropFile.handleFiles(this.files)">
             <button class="st_but">convert start</button>
     </div>
+    </form>
     </div>
     <script>
+    
+    let fileList = []; //파일 정보를 담아 둘 배열
+    let tag = "";
+    
+    
+    
+    
+    
       function DropFile(dropAreaId, fileListId) {
   let dropArea = document.getElementById(dropAreaId);
   let fileList = document.getElementById(fileListId);
@@ -64,6 +77,23 @@
     dropArea.classList.remove("highlight");
   }
 
+  function handleDrop(e) {
+	    unhighlight(e);
+	    let dt = e.dataTransfer;
+	    let files = dt.files;
+
+	    handleFiles(files);
+	    $("#chooseFile")[0].files=files;
+	    const fileList = document.getElementById(fileListId);
+	    if (fileList) {
+	      fileList.scrollTo({ top: fileList.scrollHeight });
+	    }
+	  }
+  
+  function handleFiles(files) {
+	    files = [...files];
+	    files.forEach(previewFile);
+	  }
  
 
   function previewFile(file) {
@@ -105,7 +135,7 @@
   };
 }
 
-const dropFile = new DropFile("drop-file", "files");
+const dropFile = new DropFile("drop-file", "drop-file");
     
     </script>
 
