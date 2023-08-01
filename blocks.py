@@ -15,6 +15,16 @@ from abc import abstractmethod
 from types import ModuleType
 from typing import TYPE_CHECKING, Any, Callable, Dict, Iterator, List, Set, Tuple, Type
 
+from gradio import (
+    components,
+    external,
+    networking,
+    queueing,
+    routes,
+    strings,
+    utils,
+    encryptor,
+)
 import anyio
 import requests
 from anyio import CapacityLimiter
@@ -35,16 +45,6 @@ from gradio.utils import (
     get_continuous_fn,
 )
 
-from gradio import (
-    components,
-    external,
-    networking,
-    queueing,
-    routes,
-    strings,
-    utils,
-    encryptor,
-)
 
 set_documentation_group("blocks")
 
