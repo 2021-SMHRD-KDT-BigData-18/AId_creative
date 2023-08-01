@@ -20,16 +20,6 @@ import requests
 from anyio import CapacityLimiter
 from typing_extensions import Literal
 
-from gradio import (
-    components,
-    external,
-    networking,
-    queueing,
-    routes,
-    strings,
-    utils,
-    encryptor,
-)
 from gradio.context import Context
 from gradio.deprecation import check_deprecated_parameters
 from gradio.documentation import document, set_documentation_group
@@ -43,6 +33,17 @@ from gradio.utils import (
     delete_none,
     get_cancel_function,
     get_continuous_fn,
+)
+
+from gradio import (
+    components,
+    external,
+    networking,
+    queueing,
+    routes,
+    strings,
+    utils,
+    encryptor,
 )
 
 set_documentation_group("blocks")
