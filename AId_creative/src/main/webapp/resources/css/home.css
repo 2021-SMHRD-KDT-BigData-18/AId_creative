@@ -212,16 +212,21 @@ margin-top: 50px;
             top: 0;
             padding: 10px 25px;
             width: 30%;
-            height: 50%;
+            height: 60%;
             border: 3px solid black;
 
         }
 
         h1 {
-            margin: 0;
+            margin-top: 30px;
             margin-bottom: 30px;
         }
 
         .hidden {
             display: none;
         }
+       ul{
+       margin-top:40px;
+       margin-bottom:20px;
+       }
+      

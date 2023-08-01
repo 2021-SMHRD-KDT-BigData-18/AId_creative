@@ -31,8 +31,8 @@
         </div>
     </div>
     <div>
-        <div class="container">
-            <h2 style="font-family:Lobster">Our image sample</h2>
+        <div class="nav_wrap">
+           <!--  <h2 style="font-family:Lobster">Our image sample</h2>  -->
             <section class="customer-logos slider">
                 <div class="slide"><img
                         src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
@@ -61,22 +61,22 @@
                 <h1 style="font-family:Lobster">AId creative</h1>
                 <h3>작가님 환영합니다. <br>
                     AId creative 입니다. <br>
-                    AId는 AI 기반으로 작가님의 그림을 학습시켜 보다 수월한 작업에 도움을 드리는 서비스 입니다.
+                    AId는 작가님의 그림을 학습시켜 보다 빠르고 <br>수월한 작업을 할 수 있게 도움을 드리는 서비스 입니다.
                 </h3>
-                <ul>
                    
-                    <li>학습하기
-                        이미지 파일을 업로드하여 작가님의 그림을 학습시켜줍니다 (약 0시간 소요)
-                        > AI가 학습하는데에 최초 1회는 시간이 다소 소요됩니다
-                    </li><br>
-                    <li>변환하기
-                        학습시켜 생성된 그림체를 이용하여 변환된 이미지를 다운로드 합니다
-                    </li><br>
-                    <li>마이페이지
-                        한번 학습시켜놓은 그림체는 마이페이지 목록에서 확인 가능합니다
-                        저장되어 있는 모델들은 학습과정 생략 후 바로 변환 가능합니다
-                    </li>
+                <ul>
+                    <li ALIGN=LEFT>학습하기</li>
+                    <p ALIGN=LEFT>
+                        - 이미지 파일을 업로드하여 작가님의 그림을 학습킵니다. <br> 
+                        (약 0시간 소요) > AI가 학습하는데에 최초 1회는 시간이 다소 소요됩니다.</p>
+                    <li ALIGN=LEFT>변환하기</li>
+                    <p ALIGN=LEFT>- 학습시켜 생성된 그림체를 이용하여 변환된 이미지를 다운로드 합니다.</p>
+                    <li ALIGN=LEFT>마이페이지</li>
+                    <p ALIGN=LEFT> - 한번 학습시켜놓은 그림체는 마이페이지 목록에서 확인 가능합니다.<br>
+                        저장되어 있는 모델들은 학습과정 생략 후 바로 변환 가능합니다 </p>
+                    
                 </ul>
+                    
                 <button id="aaa">close</button>
             </div>
         </div>
@@ -117,6 +117,9 @@
         modal.classList.toggle("hidden");
         closeButton.addEventListener("click", displayModal)
         modalBackground.addEventListener("click", displayModal);
+        
+        
+        
+
     </script>
-    </div>
 </body>
