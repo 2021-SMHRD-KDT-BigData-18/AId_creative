@@ -37,36 +37,27 @@
             </from>
     </div>
 
+    
 
-
-    </div>
-
-
-
-
-
-    <div>
-
-        <div class="container">
-            <h2 style="font-family:Lobster">Our image sample</h2>
-            <section class="customer-logos slider">
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+       <div class="nav_wrap">
+           <!--  <h2 style="font-family:Lobster">Our image sample</h2>  -->
+          <section class="customer-logos slider">
+                <ul class="slide" id="img1"><img
+                        src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" alt=""></ul>
+                <ul class="slide" id="img2"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg" alt=""></ul>
+                <ul class="slide" id="img3"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg" alt=""></ul>
+                <ul class="slide" id="img4"><img
+                        src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" alt=""></ul>
+                <ul class="slide" id="img5"><img
+                        src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg" alt=""></ul>
+                <ul class="slide" id="img6"><img
+                        src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" alt=""></ul>
+                <ul class="slide" id="img7"><img
+                        src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" alt=""></ul>
 
             </section>
         </div>
-
-    </div>
+   
 
     <script>
         $(document).ready(function () {
@@ -91,6 +82,41 @@
                 }]
             });
         });
+        
+        
+        
+        
+        
+        // 샘플이미지 백그라운드 변경
+        $('#img1').hover(function () {
+        $('.nav_wrap').css("background-image", "url('https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg')")
+                         .css("background-repeat", "no-repeat").css("background-position", "center")
+
+        });
+       $('#img2').hover(function () {
+           $('.nav_wrap').css("background-image", "url('https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg')")
+           .css("background-repeat", "no-repeat").css("background-position", "center")
+       });
+       $('#img3').hover(function () {
+           $('.nav_wrap').css("background-image", "url('https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg')")
+           .css("background-repeat", "no-repeat").css("background-position", "center")
+       });
+       $('#img4').hover(function () {
+           $('.nav_wrap').css("background-image", "url('https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg')")
+           .css("background-repeat", "no-repeat").css("background-position", "center")
+       });
+       $('#img5').hover(function () {
+           $('.nav_wrap').css("background-image", "url('https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg')")
+           .css("background-repeat", "no-repeat").css("background-position", "center")
+       });
+       $('#img6').hover(function () {
+           $('.nav_wrap').css("background-image", "url('https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg')")
+           .css("background-repeat", "no-repeat").css("background-position", "center")
+       });
+       $('#img7').hover(function () {
+           $('.nav_wrap').css("background-image", "url('https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg')")
+           .css("background-repeat", "no-repeat").css("background-position", "center")
+       });
     </script>
 
   
