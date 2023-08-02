@@ -78,22 +78,22 @@
   }
 
   function handleDrop(e) {
-	    unhighlight(e);
-	    let dt = e.dataTransfer;
-	    let files = dt.files;
+       unhighlight(e);
+       let dt = e.dataTransfer;
+       let files = dt.files;
 
-	    handleFiles(files);
-	    $("#chooseFile")[0].files=files;
-	    const fileList = document.getElementById(fileListId);
-	    if (fileList) {
-	      fileList.scrollTo({ top: fileList.scrollHeight });
-	    }
-	  }
+       handleFiles(files);
+       $("#chooseFile")[0].files=files;
+       const fileList = document.getElementById(fileListId);
+       if (fileList) {
+         fileList.scrollTo({ top: fileList.scrollHeight });
+       }
+     }
   
   function handleFiles(files) {
-	    files = [...files];
-	    files.forEach(previewFile);
-	  }
+       files = [...files];
+       files.forEach(previewFile);
+     }
  
 
   function previewFile(file) {
