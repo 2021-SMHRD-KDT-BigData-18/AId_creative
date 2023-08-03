@@ -86,7 +86,7 @@
 								<tr>
 
      								<td class="box">${item.img_code}</td>
-     								<td class="box"><div onclick="location.href='http://125.136.66.101:5500/download?img_code=${item.img_code}'">${item.img_name}
+     								<!-- <td class="box"><div onclick="location.href='http://220.80.33.73:9000/download?img_code=${item.img_code}'"> -->${item.img_name}
      								<img alt="" src="${item.img_name}"></div></td>
      								<td class="box">${item.user_id}</td>
      								<td class="box">${item.model_code}</td>

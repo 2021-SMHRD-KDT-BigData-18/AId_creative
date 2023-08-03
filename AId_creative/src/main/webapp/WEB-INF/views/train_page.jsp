@@ -9,6 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="resources/css/king.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" >
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
             </form>
             
         </div>
-        <form action="goking" method="get"> 
+        <form action="http://localhost:9000/upload_train_set" method="post" enctype="multipart/form-data"> 
         <div id="root">
           <h2 class="title">File Upload</h2>
           <hr>
@@ -39,7 +40,7 @@
                 <p class="message">Drag files to upload</p>
               </div>
               <label class="file-label" for="chooseFile">Choose File</label>
-              <input class="file" id="chooseFile" type="file" multiple onchange="dropFile.handleFiles(this.files)">
+              <input class="file" name="uploadFile" id="chooseFile" type="file" multiple style="visibility: hidden;" onchange="dropFile.handleFiles(this.files)">
             </div>
             <div id="files" class="files">
               <div class="file">
@@ -67,7 +68,92 @@
     </div>
  </from>
     <script>
-		
+	    let fileList = []; //파일 정보를 담아 둘 배열
+	    let tag = "";
+	    
+	    
+	    
+	    
+	    
+	      function DropFile(dropAreaId, fileListId) {
+	  let dropArea = document.getElementById(dropAreaId);
+	  let fileList = document.getElementById(fileListId);
+	
+	  function preventDefaults(e) {
+	    e.preventDefault();
+	    e.stopPropagation();
+	  }
+	
+	  function highlight(e) {
+	    preventDefaults(e);
+	    dropArea.classList.add("highlight");
+	  }
+	
+	  function unhighlight(e) {
+	    preventDefaults(e);
+	    dropArea.classList.remove("highlight");
+	  }
+	
+	  function handleDrop(e) {
+	       unhighlight(e);
+	       let dt = e.dataTransfer;
+	       let files = dt.files;
+	
+	       handleFiles(files);
+	       $("#chooseFile")[0].files=files;
+	       const fileList = document.getElementById(fileListId);
+	       if (fileList) {
+	         fileList.scrollTo({ top: fileList.scrollHeight });
+	       }
+	     }
+	  
+	  function handleFiles(files) {
+	       files = [...files];
+	       files.forEach(previewFile);
+	     }
+	 
+	
+	  function previewFile(file) {
+	    console.log(file);
+	    fileList.appendChild(renderFile(file));
+	  }
+	
+	  function renderFile(file) {
+	    let fileDOM = document.createElement("div");
+	    fileDOM.className = "file";
+	    fileDOM.innerHTML = `
+	      <div class="thumbnail">
+	        <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일타입 이미지" class="image">
+	      </div>
+	      <div class="details">
+	        <header class="header">
+	          <span class="name">${file.name}</span>
+	          <span class="size">${file.size}</span>
+	        </header>
+	        <div class="progress">
+	          <div class="bar"></div>
+	        </div>
+	        <div class="status">
+	          <span class="percent">100% done</span>
+	          <span class="speed">90KB/sec</span>
+	        </div>
+	      </div>
+	    `;
+	    return fileDOM;
+	  }
+	
+	  dropArea.addEventListener("dragenter", highlight, false);
+	  dropArea.addEventListener("dragover", highlight, false);
+	  dropArea.addEventListener("dragleave", unhighlight, false);
+	  dropArea.addEventListener("drop", handleDrop, false);
+	
+	  return {
+	    handleFiles
+	  };
+	}
+	
+	const dropFile = new DropFile("drop-file", "drop-file");
+		/*
     function DropFile(dropAreaId, fileListId) {
     	  let dropArea = document.getElementById(dropAreaId);
     	  let fileList = document.getElementById(fileListId);
@@ -145,6 +231,7 @@
     	}
 
     	const dropFile = new DropFile("drop-file", "files");
+		*/
     
     
     
