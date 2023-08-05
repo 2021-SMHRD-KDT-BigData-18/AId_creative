@@ -5,7 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Base64;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +32,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import kr.AId_creative.entity.T_Image;
+import kr.AId_creative.entity.T_Model;
 import kr.AId_creative.entity.T_User;
 import kr.AId_creative.mapper.A_Mapper;
 
@@ -135,7 +140,10 @@ public class A_Controller {
 
 	// 변환페이지
 	@RequestMapping("/goCvt")
-	public String goCvt() {
+	public String goCvt(@SessionAttribute("user") T_User user, Model model) {
+		ArrayList<T_Model> result = mapper.my_model(user.getUser_id());
+		
+		model.addAttribute("result", result);
 		return "cvt_page";
 	}
 
@@ -144,8 +152,25 @@ public class A_Controller {
 	public String goMyPage(@SessionAttribute("user") T_User user, Model model) {
 		ArrayList<T_Image> result = mapper.my_page(user.getUser_id());
 		System.out.println(result);
+		
+		
+		
 		model.addAttribute("result", result);
 		return "my_page";
 	}
 
+	
+   private String encodeImageToBase64(String event_img) { // 절대경로
+	      try {
+	         Path imagePath = Paths.get(event_img);
+	         byte[] imageBytes = Files.readAllBytes(imagePath);
+	         return Base64.getEncoder().encodeToString(imageBytes);
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      }
+	      return null;
+	   }
+	
+	
+	
 }

@@ -31,6 +31,7 @@
         </div>
         <form action="http://localhost:9000/upload_train_set" method="post" enctype="multipart/form-data"> 
         <div id="root">
+        <input type="text" name="modelName">
           <h2 class="title">File Upload</h2>
           <hr>
           <div class="contents">
@@ -42,6 +43,7 @@
               <label class="file-label" for="chooseFile">Choose File</label>
               <input class="file" name="uploadFile" id="chooseFile" type="file" multiple style="visibility: hidden;" onchange="dropFile.handleFiles(this.files)">
             </div>
+            <input name="username" value="${user.user_id }" style="visibility: hidden;">
             <div id="files" class="files">
               <div class="file">
                 <div class="thumbnail">

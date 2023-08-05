@@ -34,7 +34,16 @@
         <div id="root">
           <h2 class="title">File Upload</h2>
           <hr>
-          <form class="cvtform" action="http://220.80.33.73:9000/CVT" method="post" enctype="multipart/form-data">
+          <form class="cvtform" action="http://localhost:9000/CVT" method="post" enctype="multipart/form-data">
+	       	<select name="modelname" id="modelname">
+	       	<option value="">--Please choose an option--</option>
+	       	<c:forEach var="item" items="${result}">
+	       		<option value="${item.model_name }">${item.model_name }</option>
+	       	</c:forEach>
+			</select>
+          
+          
+          </select>
           <div class="contents">
             <div class="upload-box">
               <div id="drop-file" class="drag-file">

@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Service;
 
 import kr.AId_creative.entity.T_Image;
+import kr.AId_creative.entity.T_Model;
 import kr.AId_creative.entity.T_User;
 
 public interface A_Mapper {
@@ -27,7 +28,9 @@ public interface A_Mapper {
 	@Select("SELECT * FROM T_IMAGE WHERE USER_ID = #{n1}")
 	public ArrayList<T_Image> my_page(String n1);
 
-
+	// 개인별 모델 조회
+	@Select("SELECT * FROM T_MODEL WHERE USER_ID = #{n1}")
+	public ArrayList<T_Model> my_model(String n1);
 
 	
 	

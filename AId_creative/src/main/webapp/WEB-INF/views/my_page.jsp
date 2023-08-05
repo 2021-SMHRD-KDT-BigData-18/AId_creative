@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,8 +87,9 @@
 								<tr>
 
      								<td class="box">${item.img_code}</td>
-     								<!-- <td class="box"><div onclick="location.href='http://220.80.33.73:9000/download?img_code=${item.img_code}'"> -->${item.img_name}
-     								<img alt="" src="${item.img_name}"></div></td>
+     								<td class="box"><div onclick="location.href='http://220.80.33.73:9000/download?img_code=${item.img_code}'">${item.img_name}
+     								<img alt="" src="/cvt/${item.img_name}"/>
+     								<img alt="" src="http://220.80.33.73:8085/${item.img_name}"/></div></td>
      								<td class="box">${item.user_id}</td>
      								<td class="box">${item.model_code}</td>
      								<td class="box">${item.img_prompt}</td>
